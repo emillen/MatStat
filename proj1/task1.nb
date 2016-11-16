@@ -10,17 +10,63 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[       761,         33]
-NotebookOptionsPosition[       561,         21]
-NotebookOutlinePosition[       901,         36]
-CellTagsIndexPosition[       858,         33]
+NotebookDataLength[      2668,         86]
+NotebookOptionsPosition[      2212,         67]
+NotebookOutlinePosition[      2551,         82]
+CellTagsIndexPosition[      2508,         79]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{"tetrahedron", " ", ":=", " ", 
+  RowBox[{"Range", "[", 
+   RowBox[{"1", ",", " ", "4"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.688284686482952*^9, 3.688284692318383*^9}, {
+   3.6882858300559673`*^9, 3.688285891047723*^9}, 3.688285926247794*^9}],
+
+Cell[BoxData[
+ RowBox[{"cube", " ", ":=", " ", 
+  RowBox[{"Range", "[", 
+   RowBox[{"1", ",", " ", "6"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.688285907573246*^9, 3.688285921063477*^9}, {
+  3.688285951527247*^9, 3.6882859515432167`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"octahedron", " ", ":=", " ", 
+  RowBox[{"Range", "[", 
+   RowBox[{"1", ",", " ", "8"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.688285932172934*^9, 3.688285942239163*^9}}],
+
+Cell[BoxData[
+ RowBox[{"dodehedron", " ", ":=", " ", 
+  RowBox[{"Range", "[", 
+   RowBox[{"1", ",", " ", "12"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.688285963477191*^9, 3.688285972247341*^9}}],
+
+Cell[BoxData[
+ RowBox[{"icosahedron", " ", ":=", " ", 
+  RowBox[{"Range", "[", 
+   RowBox[{"1", ",", " ", "20"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6882859773650417`*^9, 3.688285984303068*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"combinations", " ", ":=", " ", 
+   RowBox[{"Tuples", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "tetrahedron", ",", " ", "cube", ",", " ", "octahedron", ",", " ", 
+      "dodehedron", ",", " ", "icosahedron"}], "}"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{
+  3.688284784249898*^9, {3.688286158997862*^9, 3.688286244669683*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.688285043630239*^9, 3.688285055932344*^9}, {
+  3.68828546129001*^9, 3.688285462146443*^9}}]
 },
 WindowSize->{630, 843},
-WindowMargins->{{Automatic, 395}, {25, Automatic}},
+WindowMargins->{{Automatic, 395}, {0, Automatic}},
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -35,9 +81,14 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 271, 5, 34, "Input"],
+Cell[832, 27, 241, 5, 34, "Input"],
+Cell[1076, 34, 196, 4, 34, "Input"],
+Cell[1275, 40, 197, 4, 34, "Input"],
+Cell[1475, 46, 200, 4, 34, "Input"],
+Cell[1678, 52, 387, 9, 100, "Input"],
+Cell[2068, 63, 140, 2, 32, "Input"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
