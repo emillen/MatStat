@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38117,       1124]
-NotebookOptionsPosition[     35624,       1035]
-NotebookOutlinePosition[     35956,       1050]
-CellTagsIndexPosition[     35913,       1047]
+NotebookDataLength[     39471,       1168]
+NotebookOptionsPosition[     36740,       1071]
+NotebookOutlinePosition[     37081,       1086]
+CellTagsIndexPosition[     37038,       1083]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -833,22 +833,6 @@ Cell[BoxData["187.3170731707317`"], "Output",
    3.6883326780378428`*^9}]
 }, Open  ]],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Expectation", "[", 
-  RowBox[{
-   RowBox[{"pf4", "[", "x", "]"}], ",", " ", 
-   RowBox[{"x", "\[Distributed]", 
-    RowBox[{"DiscreteUniformDistribution", "[", 
-     RowBox[{"{", 
-      RowBox[{"1", ",", " ", "50"}], "}"}], "]"}]}]}], "]"}]], "Input"],
-
-Cell[BoxData[
- FractionBox["1", "50"]], "Output",
- CellChangeTimes->{{3.68833267005759*^9, 3.68833267813489*^9}}]
-}, Open  ]],
-
 Cell[BoxData[{
  RowBox[{
   RowBox[{"KonvTable", " ", "=", " ", 
@@ -972,40 +956,54 @@ Cell[BoxData["211365.6861722165`"], "Output",
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"expValTeddy", " ", "=", " ", 
+ RowBox[{"\[Mu]1", "=", 
   RowBox[{"Sum", "[", 
    RowBox[{
-    RowBox[{"k", "*", 
-     RowBox[{"pf4", "[", "k", "]"}]}], ",", " ", 
+    RowBox[{"x", " ", 
+     RowBox[{"pf4", "[", "x", "]"}]}], ",", 
     RowBox[{"{", 
-     RowBox[{"k", ",", " ", "5", ",", " ", "50"}], "}"}]}], "]"}]}]], "Input"],
+     RowBox[{"x", ",", "5", ",", "50"}], "}"}]}], "]"}]}]], "Input"],
 
 Cell[BoxData[
  FractionBox["55", "2"]], "Output",
- CellChangeTimes->{3.6883328153750668`*^9}]
+ CellChangeTimes->{3.68833382103368*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"variance", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"k", "^", "2"}], " ", "*", " ", 
+      RowBox[{"pf4", "[", "k", "]"}]}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", " ", "5", ",", " ", "50"}], "}"}]}], "]"}], " ", "-", 
+   
+   RowBox[{"\[Mu]1", "^", "2"}]}]}]], "Input",
+ CellChangeTimes->{{3.688333672546574*^9, 3.688333680661257*^9}, 
+   3.6883337151175337`*^9, {3.688333747829685*^9, 3.688333750445607*^9}, {
+   3.688334103188017*^9, 3.688334104675009*^9}}],
+
+Cell[BoxData[
+ FractionBox["655", "12"]], "Output",
+ CellChangeTimes->{{3.688333724215385*^9, 3.68833375148215*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"stdDeviationTeddy", " ", "=", " ", 
-  RowBox[{"Sqrt", "[", 
-   RowBox[{
-    RowBox[{"Sum", "[", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"k", "^", "2"}], " ", "*", " ", 
-       RowBox[{"pf4", "[", "k", "]"}]}], ",", " ", 
-      RowBox[{"{", 
-       RowBox[{"k", ",", " ", "5", ",", " ", "50"}], "}"}]}], "]"}], " ", "-",
-     " ", 
-    RowBox[{"expValTeddy", "^", "2"}]}], "]"}]}]], "Input"],
+  RowBox[{"Sqrt", "[", "variance", "]"}]}]], "Input",
+ CellChangeTimes->{{3.688333714121767*^9, 3.6883337558049498`*^9}}],
 
 Cell[BoxData[
  FractionBox[
   SqrtBox[
    FractionBox["655", "3"]], "2"]], "Output",
- CellChangeTimes->{3.688332820378083*^9}]
+ CellChangeTimes->{3.688332820378083*^9, 3.6883337561554003`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1026,6 +1024,44 @@ Cell[BoxData["276"], "Output",
  CellChangeTimes->{3.688332826839437*^9}]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"variance2", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"k", "^", "2"}], " ", "*", " ", 
+      RowBox[{"KonvTable10", "[", 
+       RowBox[{"[", "k", "]"}], "]"}]}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "51", ",", " ", "501"}], "}"}]}], "]"}], " ", "-", 
+   " ", 
+   RowBox[{"expValCar", "^", "2"}]}]}]], "Input",
+ CellChangeTimes->{{3.6883339097851257`*^9, 3.688333929819977*^9}, {
+  3.6883339634277287`*^9, 3.688333998555583*^9}, {3.688334088035137*^9, 
+  3.688334108315022*^9}}],
+
+Cell[BoxData[
+ FractionBox["3275", "6"]], "Output",
+ CellChangeTimes->{3.688334001059198*^9, 3.6883341117469387`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"stdDeviationCar", "=", 
+  RowBox[{"Sqrt", "[", "variance2", "]"}]}]], "Input",
+ CellChangeTimes->{{3.688334006515925*^9, 3.6883340521350107`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"5", " ", 
+  SqrtBox[
+   FractionBox["131", "6"]]}]], "Output",
+ CellChangeTimes->{3.688334058827293*^9, 3.688334114302537*^9}]
+}, Open  ]],
+
 Cell[BoxData[
  RowBox[{"\n", "\n", "\n", "\n", "\n", "\n", "\n", "\n", " ", "\n", "\n", 
   "\n", "\n", "\n", "\n", "\n", "\n", "\n", "\n", "\n", "\n", "\n", "\n", 
@@ -1034,7 +1070,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.688332722278981*^9, 3.688332824845337*^9}}]
 },
 WindowSize->{839, 995},
-WindowMargins->{{255, Automatic}, {0, 28}},
+WindowMargins->{{228, Automatic}, {-37, Automatic}},
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1095,37 +1131,45 @@ Cell[CellGroupData[{
 Cell[29023, 817, 452, 10, 32, "Input"],
 Cell[29478, 829, 168, 3, 32, "Output"]
 }, Open  ]],
+Cell[29661, 835, 2672, 71, 241, "Input"],
 Cell[CellGroupData[{
-Cell[29683, 837, 275, 7, 34, "Input"],
-Cell[29961, 846, 113, 2, 49, "Output"]
+Cell[32358, 910, 93, 2, 55, "Input"],
+Cell[32454, 914, 72, 1, 32, "Output"]
 }, Open  ]],
-Cell[30089, 851, 2672, 71, 241, "Input"],
+Cell[32541, 918, 441, 13, 64, "Input"],
 Cell[CellGroupData[{
-Cell[32786, 926, 93, 2, 55, "Input"],
-Cell[32882, 930, 72, 1, 32, "Output"]
-}, Open  ]],
-Cell[32969, 934, 441, 13, 64, "Input"],
-Cell[CellGroupData[{
-Cell[33435, 951, 83, 2, 32, "Input"],
-Cell[33521, 955, 91, 1, 32, "Output"]
+Cell[33007, 935, 83, 2, 32, "Input"],
+Cell[33093, 939, 91, 1, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33649, 961, 139, 4, 32, "Input"],
-Cell[33791, 967, 87, 1, 32, "Output"]
+Cell[33221, 945, 139, 4, 32, "Input"],
+Cell[33363, 951, 87, 1, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33915, 973, 258, 7, 34, "Input"],
-Cell[34176, 982, 93, 2, 49, "Output"]
+Cell[33487, 957, 228, 7, 34, "Input"],
+Cell[33718, 966, 90, 2, 49, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34306, 989, 419, 12, 34, "Input"],
-Cell[34728, 1003, 126, 4, 78, "Output"]
+Cell[33845, 973, 549, 14, 34, "Input"],
+Cell[34397, 989, 116, 2, 49, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34891, 1012, 328, 10, 34, "Input"],
-Cell[35222, 1024, 72, 1, 32, "Output"]
+Cell[34550, 996, 181, 3, 32, "Input"],
+Cell[34734, 1001, 150, 4, 78, "Output"]
 }, Open  ]],
-Cell[35309, 1028, 311, 5, 759, "Input"]
+Cell[CellGroupData[{
+Cell[34921, 1010, 328, 10, 34, "Input"],
+Cell[35252, 1022, 72, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35361, 1028, 569, 15, 34, "Input"],
+Cell[35933, 1045, 117, 2, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36087, 1052, 170, 3, 32, "Input"],
+Cell[36260, 1057, 150, 4, 59, "Output"]
+}, Open  ]],
+Cell[36425, 1064, 311, 5, 759, "Input"]
 }
 ]
 *)
