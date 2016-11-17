@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     29247,        834]
-NotebookOptionsPosition[     26124,        725]
-NotebookOutlinePosition[     26467,        740]
-CellTagsIndexPosition[     26424,        737]
+NotebookDataLength[     29566,        838]
+NotebookOptionsPosition[     26437,        729]
+NotebookOutlinePosition[     26784,        744]
+CellTagsIndexPosition[     26741,        741]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -246,14 +246,18 @@ Cell["\<\
 To start off we defined the probability functions of the dice. Since the dice \
 are perfect, all of the sides have the exact same probability of getting \
 their face up, so we can define them as Discrete uniform distributions from 1 \
-to the amount of faces the die has. 
+to the amount of faces the die has. Then we performed Convolutions in order. \
+First with die 1 and 2, then we took the result from that and convoluted it \
+with die 3, and then 4 and lastly 5. This gave us the probability function of \
+the sum.
 \
 \>", "Text",
  CellChangeTimes->{
   3.688337813844276*^9, {3.688338020042974*^9, 3.688338048626997*^9}, {
    3.6883381269865*^9, 3.688338175362125*^9}, {3.6883382096978607`*^9, 
    3.688338209993808*^9}, {3.688338284393538*^9, 3.688338317681159*^9}, {
-   3.688338391561318*^9, 3.688338470176386*^9}}]
+   3.688338391561318*^9, 3.688338470176386*^9}, {3.6883387611738925`*^9, 
+   3.6883388673968725`*^9}, {3.6883389040048404`*^9, 3.6883389125565147`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -724,8 +728,8 @@ Cell[TextData[{
 }, Open  ]]
 },
 WindowSize->{839, 995},
-WindowMargins->{{-461, Automatic}, {-100, Automatic}},
-FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+WindowMargins->{{Automatic, 259}, {Automatic, 2}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -740,32 +744,32 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 260, 4, 93, "Title"],
-Cell[843, 28, 101, 1, 51, "Subtitle"],
-Cell[947, 31, 369, 10, 62, "Text"],
+Cell[580, 22, 260, 4, 91, "Title"],
+Cell[843, 28, 101, 1, 49, "Subtitle"],
+Cell[947, 31, 369, 10, 57, "Text"],
 Cell[CellGroupData[{
-Cell[1341, 45, 184, 6, 65, "Section"],
-Cell[1528, 53, 285, 6, 55, "Text"],
+Cell[1341, 45, 184, 6, 63, "Section"],
+Cell[1528, 53, 285, 6, 49, "Text"],
 Cell[CellGroupData[{
-Cell[1838, 63, 218, 9, 45, "Subsection"],
-Cell[2059, 74, 476, 8, 99, "Text"],
+Cell[1838, 63, 218, 9, 43, "Subsection"],
+Cell[2059, 74, 476, 8, 68, "Text"],
 Cell[CellGroupData[{
-Cell[2560, 86, 292, 3, 33, "ItemNumbered"],
-Cell[2855, 91, 202, 3, 33, "ItemNumbered"],
-Cell[3060, 96, 217, 2, 33, "ItemNumbered"],
-Cell[3280, 100, 221, 4, 33, "ItemNumbered"]
+Cell[2560, 86, 292, 3, 30, "ItemNumbered"],
+Cell[2855, 91, 202, 3, 30, "ItemNumbered"],
+Cell[3060, 96, 217, 2, 30, "ItemNumbered"],
+Cell[3280, 100, 221, 4, 30, "ItemNumbered"]
 }, Open  ]],
-Cell[3516, 107, 96, 1, 32, "Input"]
+Cell[3516, 107, 96, 1, 30, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3649, 113, 190, 8, 45, "Subsection"],
+Cell[3649, 113, 190, 8, 43, "Subsection"],
 Cell[3842, 123, 346, 10, 33, "Text"],
 Cell[4191, 135, 260, 5, 33, "Text"],
 Cell[4454, 142, 171, 3, 33, "Text"],
 Cell[4628, 147, 102, 2, 33, "Text"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[4767, 154, 189, 8, 37, "Subsection"],
+Cell[4767, 154, 189, 8, 35, "Subsection"],
 Cell[CellGroupData[{
 Cell[4981, 166, 91, 2, 31, "Item"],
 Cell[5075, 170, 214, 8, 31, "Item"],
@@ -779,62 +783,62 @@ Cell[6388, 217, 89, 1, 33, "Text"]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6526, 224, 169, 6, 65, "Section"],
+Cell[6526, 224, 169, 6, 63, "Section"],
 Cell[CellGroupData[{
-Cell[6720, 234, 198, 8, 45, "Subsection"],
-Cell[6921, 244, 583, 11, 99, "Text"]
+Cell[6720, 234, 198, 8, 43, "Subsection"],
+Cell[6921, 244, 896, 15, 125, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7541, 260, 194, 8, 45, "Subsection"],
-Cell[7738, 270, 58, 1, 33, "Text"]
+Cell[7854, 264, 194, 8, 43, "Subsection"],
+Cell[8051, 274, 58, 1, 30, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7833, 276, 199, 8, 45, "Subsection"],
-Cell[8035, 286, 51, 0, 33, "Text"]
+Cell[8146, 280, 199, 8, 43, "Subsection"],
+Cell[8348, 290, 51, 0, 30, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8123, 291, 211, 8, 45, "Subsection"],
-Cell[8337, 301, 51, 0, 33, "Text"]
+Cell[8436, 295, 211, 8, 43, "Subsection"],
+Cell[8650, 305, 51, 0, 30, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8437, 307, 155, 5, 65, "Section"],
-Cell[8595, 314, 283, 5, 70, "Text"],
-Cell[8881, 321, 89, 1, 70, "Text"],
-Cell[8973, 324, 150, 4, 70, "Text"],
-Cell[9126, 330, 219, 5, 70, "Text"],
+Cell[8750, 311, 155, 5, 63, "Section"],
+Cell[8908, 318, 283, 5, 70, "Text"],
+Cell[9194, 325, 89, 1, 70, "Text"],
+Cell[9286, 328, 150, 4, 70, "Text"],
+Cell[9439, 334, 219, 5, 70, "Text"],
 Cell[CellGroupData[{
-Cell[9370, 339, 62, 1, 70, "Subsection"],
-Cell[9435, 342, 278, 7, 70, "Text"],
-Cell[9716, 351, 13080, 243, 70, "Text"],
-Cell[22799, 596, 669, 17, 70, "Text"],
-Cell[23471, 615, 525, 17, 70, "Text"],
+Cell[9683, 343, 62, 1, 70, "Subsection"],
+Cell[9748, 346, 278, 7, 70, "Text"],
+Cell[10029, 355, 13080, 243, 70, "Text"],
+Cell[23112, 600, 669, 17, 70, "Text"],
+Cell[23784, 619, 525, 17, 70, "Text"],
 Cell[CellGroupData[{
-Cell[24021, 636, 153, 5, 70, "Item"],
-Cell[24177, 643, 120, 3, 70, "Item"],
-Cell[24300, 648, 106, 1, 70, "Item"],
-Cell[24409, 651, 123, 3, 70, "Item"]
+Cell[24334, 640, 153, 5, 70, "Item"],
+Cell[24490, 647, 120, 3, 70, "Item"],
+Cell[24613, 652, 106, 1, 70, "Item"],
+Cell[24722, 655, 123, 3, 70, "Item"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24581, 660, 70, 1, 70, "Subsection"],
-Cell[24654, 663, 468, 14, 70, "Text"],
+Cell[24894, 664, 70, 1, 70, "Subsection"],
+Cell[24967, 667, 468, 14, 70, "Text"],
 Cell[CellGroupData[{
-Cell[25147, 681, 112, 3, 70, "Item"],
-Cell[25262, 686, 63, 0, 70, "Item"]
+Cell[25460, 685, 112, 3, 70, "Item"],
+Cell[25575, 690, 63, 0, 70, "Item"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25374, 692, 66, 1, 70, "Subsection"],
-Cell[25443, 695, 140, 3, 70, "Text"],
+Cell[25687, 696, 66, 1, 70, "Subsection"],
+Cell[25756, 699, 140, 3, 70, "Text"],
 Cell[CellGroupData[{
-Cell[25608, 702, 134, 3, 70, "Item"],
-Cell[25745, 707, 121, 3, 70, "Item"],
-Cell[25869, 712, 52, 0, 70, "Item"]
+Cell[25921, 706, 134, 3, 70, "Item"],
+Cell[26058, 711, 121, 3, 70, "Item"],
+Cell[26182, 716, 52, 0, 70, "Item"]
 }, Open  ]]
 }, Open  ]]
 }, Closed]],
-Cell[25960, 717, 148, 5, 51, "Section"]
+Cell[26273, 721, 148, 5, 49, "Section"]
 }, Open  ]]
 }
 ]
