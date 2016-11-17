@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     29566,        838]
-NotebookOptionsPosition[     26437,        729]
-NotebookOutlinePosition[     26784,        744]
-CellTagsIndexPosition[     26741,        741]
+NotebookDataLength[     57661,       1474]
+NotebookOptionsPosition[     53572,       1336]
+NotebookOutlinePosition[     53911,       1351]
+CellTagsIndexPosition[     53868,       1348]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,14 +30,14 @@ Cell["       Report", "Subtitle",
  CellChangeTimes->{{3.6883366477040377`*^9, 3.688336681980423*^9}}],
 
 Cell[TextData[{
- "\[LineSeparator]/ICT:IX1501 - Mathematical Statistics\n",
  StyleBox["Emil",
   IgnoreSpellCheck->True],
  " Lengman, emillen@kth.se\nSimon Enerstrand, simonene@kth.se"
 }], "Text",
  CellMargins->{{27, 10}, {0, 0}},
  CellChangeTimes->{
-  3.688336421059956*^9, {3.688336691860662*^9, 3.6883367156480083`*^9}},
+  3.688336421059956*^9, {3.688336691860662*^9, 3.6883367156480083`*^9}, {
+   3.6883420597172327`*^9, 3.688342061500751*^9}},
  FontFamily->"Times New Roman",
  FontSize->10],
 
@@ -77,10 +77,11 @@ This assignment is based on a dice game. There are five dice in the form of \
 the Platonic solids (one die with 4 possible outcomes, one with 6, one with \
 8, one with 12, and one with 20). All dice are thrown at once, and if the sum \
 of all dice are 10 or below, or 45 or higher, the player win a Teddy bear to \
-bring home. We will:\
+bring home (each game costs 2 euro). We will:\
 \>", "Text",
  CellChangeTimes->{{3.6883372288328733`*^9, 3.688337277992319*^9}, {
-  3.688337312256084*^9, 3.688337522150441*^9}}],
+  3.688337312256084*^9, 3.688337522150441*^9}, {3.688340549612856*^9, 
+  3.688340554876917*^9}}],
 
 Cell[CellGroupData[{
 
@@ -103,10 +104,7 @@ Calculate the probability of winning at least once in twenty games. \
 \>", "ItemNumbered",
  CellChangeTimes->{{3.6883372866152573`*^9, 3.6883373082879457`*^9}, {
   3.688337527086372*^9, 3.6883375933977327`*^9}}]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.6883372232241983`*^9, 3.6883372258809423`*^9}}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -242,22 +240,339 @@ Cell[TextData[{
 }], "Subsection",
  CellChangeTimes->{{3.688337833284293*^9, 3.6883378387402563`*^9}}],
 
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9}],
+
 Cell["\<\
 To start off we defined the probability functions of the dice. Since the dice \
 are perfect, all of the sides have the exact same probability of getting \
 their face up, so we can define them as Discrete uniform distributions from 1 \
-to the amount of faces the die has. Then we performed Convolutions in order. \
-First with die 1 and 2, then we took the result from that and convoluted it \
-with die 3, and then 4 and lastly 5. This gave us the probability function of \
-the sum.
-\
+to the amount of faces the die has. \
 \>", "Text",
  CellChangeTimes->{
   3.688337813844276*^9, {3.688338020042974*^9, 3.688338048626997*^9}, {
    3.6883381269865*^9, 3.688338175362125*^9}, {3.6883382096978607`*^9, 
    3.688338209993808*^9}, {3.688338284393538*^9, 3.688338317681159*^9}, {
    3.688338391561318*^9, 3.688338470176386*^9}, {3.6883387611738925`*^9, 
-   3.6883388673968725`*^9}, {3.6883389040048404`*^9, 3.6883389125565147`*^9}}]
+   3.6883388673968725`*^9}, {3.6883389040048404`*^9, 
+   3.6883389125565147`*^9}, {3.6883392439160843`*^9, 3.688339257691678*^9}, {
+   3.688339337123214*^9, 3.6883393561151667`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"pf", "(", "k", ")"}], "=", 
+   RowBox[{
+    RowBox[{"P", "(", 
+     RowBox[{"X", "=", "k"}], ")"}], "=", 
+    TagBox[GridBox[{
+       {"\[Piecewise]", GridBox[{
+          {
+           RowBox[{"1", "/", "m"}], 
+           RowBox[{"1", "\[LessEqual]", "k", "\[LessEqual]", "m"}]},
+          {"0", "otherwise"}
+         },
+         AllowedDimensions->{2, Automatic},
+         Editable->True,
+         GridBoxAlignment->{
+          "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{1.}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.84]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}},
+         Selectable->True]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{
+       "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.35]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}],
+     "Piecewise",
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True,
+     Selectable->False]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.688339362124299*^9, 3.6883393739066687`*^9}, {
+  3.688339479247428*^9, 3.68833951340204*^9}}],
+
+Cell["\<\
+Then we performed Convolutions in order. First with die 1 and 2, then we took \
+the result from that and convoluted it with die 3, and then 4 and lastly 5. \
+This gave us the probability function of the sum.\
+\>", "Text",
+ CellChangeTimes->{{3.6883393419001493`*^9, 3.6883393499709597`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Discussion", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, {
+  3.688339162508295*^9, 3.688339166187951*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+    AbsoluteThickness[1.6], 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{-0.125, 0}, {0.125, 0.}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{0.875, 0}, {1.125, 0.}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{1.875, 0}, {2.125, 0.}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{2.875, 0}, {3.125, 0.}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{3.875, 0}, {4.125, 0.}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{4.875, 0}, {5.125, 0.00002170138888888889}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{5.875, 0}, {6.125, 0.00010850694444444444}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{6.875, 0}, {7.125, 0.0003255208333333333}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{7.875, 0}, {8.125, 0.0007595486111111111}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{8.875, 0}, {9.125, 0.0014973958333333334}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{9.875, 0}, {10.125, 0.0026258680555555558}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{10.875, 0}, {11.125, 0.004210069444444444}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{11.875, 0}, {12.125, 0.006293402777777778}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{12.875, 0}, {13.125, 0.008875868055555555}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{13.875, 0}, {14.125, 0.0119140625}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{14.875, 0}, {15.125, 0.015342881944444444}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{15.875, 0}, {16.125, 0.019075520833333335}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{16.875, 0}, {17.125, 0.023003472222222224}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{17.875, 0}, {18.125, 0.02699652777777778}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{18.875, 0}, {19.125, 0.030924479166666668}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{19.875, 0}, {20.125, 0.034657118055555554}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{20.875, 0}, {21.125, 0.0380859375}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{21.875, 0}, {22.125, 0.04112413194444445}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{22.875, 0}, {23.125, 0.04370659722222222}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{23.875, 0}, {24.125, 0.04578993055555555}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{24.875, 0}, {25.125, 0.047352430555555554}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{25.875, 0}, {26.125, 0.048394097222222224}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{26.875, 0}, {27.125, 0.048914930555555555}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{27.875, 0}, {28.125, 0.048914930555555555}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{28.875, 0}, {29.125, 0.048394097222222224}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{29.875, 0}, {30.125, 0.047352430555555554}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{30.875, 0}, {31.125, 0.04578993055555555}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{31.875, 0}, {32.125, 0.04370659722222222}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{32.875, 0}, {33.125, 0.04112413194444445}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{33.875, 0}, {34.125, 0.0380859375}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{34.875, 0}, {35.125, 0.034657118055555554}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{35.875, 0}, {36.125, 0.030924479166666668}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{36.875, 0}, {37.125, 0.02699652777777778}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{37.875, 0}, {38.125, 0.023003472222222224}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{38.875, 0}, {39.125, 0.019075520833333335}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{39.875, 0}, {40.125, 0.015342881944444444}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{40.875, 0}, {41.125, 0.0119140625}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{41.875, 0}, {42.125, 0.008875868055555555}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{42.875, 0}, {43.125, 0.006293402777777778}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{43.875, 0}, {44.125, 0.004210069444444444}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{44.875, 0}, {45.125, 0.0026258680555555558}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{45.875, 0}, {46.125, 0.0014973958333333334}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{46.875, 0}, {47.125, 0.0007595486111111111}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{47.875, 0}, {48.125, 0.0003255208333333333}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{48.875, 0}, {49.125, 0.00010850694444444444}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{49.875, 0}, {50.125, 0.00002170138888888889}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{50.875, 0}, {51.125, 0.}]}}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+    AbsoluteThickness[1.6], {}, {{}, LineBox[CompressedData["
+1:eJxd1LtLXEEUBvBNUoQgmAFFAwpZ4yuvXV+7umt09+x7rRICgmUIaLXgaJdu
+2co0ZsAiRYoQYmISe8tkrPwXLAe0ESyGFCksQvbeORK+c7hb/Pjg7tyZM2fk
+9ebL9VuJRCLT/d3kXyj7KwFli+hL4d/Cf4VvEPq28B3hu+i2Eu6jwdbxQOv4
+TyG4X3iQhk+2oieso31PeIhW48qyh4XvU373LLd71gymJNqO0NudqNY4f4C2
+o5Q+7aROO+ucj6HtOF3sFbrPFucTaDtJ2/GC33D+EG0fUfy6VIfzx2j7hDbi
+2uH8KdqmKNqtgdY7ztNoO8XfsxecnEa7aTrPRRvynvMZtJuhF1f7z6/2P3A+
+i3azdPgjqo+cz6HdXNiPn584z6BdJvRD+zPnWbTLhvX0fuF8Hu3mqefoVff5
+yvkC2i1wvxxwnkO7HJ/XN87zaJfn87rOF9FukeK/6/nO+TO0E04uiXxJvH9Z
+vH9ZrK8g1lcQ31cU31fE/VCE1oT7aYQ94XmoElqX8DyNsC9hP6gyWpexn4yw
+L2M/qgpaV7CfjbCv4H1QVbSu4n0ywr6K91HV0LqG99kI+xrOA1VH6zrOEyPs
+6ziPVAOtGzjPjLBv4DxUTbRu4jw1wr6J81itoPVK6IfrMv/9D5cTs7Y=
+      
+      "]]}, {}, {{}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{
+    FormBox["\"x\"", TraditionalForm], 
+    FormBox["\"pf(x)\"", TraditionalForm]},
+  AxesOrigin->{-0.125, 0},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "MessagesHead" -> DiscretePlot, "AxisPadding" -> Scaled[0.02], 
+    "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "DefaultPlotStyle" -> {
+      Directive[
+       RGBColor[0.368417, 0.506779, 0.709798], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.880722, 0.611041, 0.142051], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.560181, 0.691569, 0.194885], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.922526, 0.385626, 0.209179], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.528488, 0.470624, 0.701351], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.772079, 0.431554, 0.102387], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.363898, 0.618501, 0.782349], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[1, 0.75, 0], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.647624, 0.37816, 0.614037], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.571589, 0.586483, 0.], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.915, 0.3325, 0.2125], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], 
+       AbsoluteThickness[1.6]]}, "DomainPadding" -> Scaled[0.02], 
+    "PointSizeFunction" -> "SmallPointSize", "RangePadding" -> Scaled[0.05]},
+  PlotRange->{{-0.125, 51.125}, {0, 0.048914930555555555`}},
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.02]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.68834151858814*^9, 3.688341553438225*^9}}],
+
+Cell["Above we have a diagram of the function ", "Text",
+ CellChangeTimes->{{3.688341576762554*^9, 3.6883416304862328`*^9}}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -272,8 +587,63 @@ Cell[TextData[{
 }], "Subsection",
  CellChangeTimes->{{3.68833807029881*^9, 3.688338079218799*^9}}],
 
-Cell["", "Text",
- CellChangeTimes->{3.688338063690612*^9}]
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9}],
+
+Cell[TextData[{
+ "Now that we have the probability function of the sum of the dice, we can \
+move on to calculate the probability of winning Teddy. We define the random \
+variable ",
+ Cell[BoxData[
+  FormBox["S", TraditionalForm]]],
+ " as the sum of the dice. We know that if S satisfies ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"S", "\[LessEqual]", "10"}], TraditionalForm]]],
+ " or ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"S", "\[GreaterEqual]", "45"}], TraditionalForm]]],
+ " you will win the Teddy. We can easily use that to calculate the \
+probability."
+}], "Text",
+ CellChangeTimes->{{3.6883393419001493`*^9, 3.6883393499709597`*^9}, {
+  3.688339752272711*^9, 3.6883399994552317`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"P", "(", 
+    RowBox[{"X", "=", "\"\<winning teddy\>\""}], ")"}], "=", " ", 
+   RowBox[{
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"k", "=", "5"}], "10"], 
+     RowBox[{"pf", "(", "k", ")"}]}], " ", "+", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"k", "=", "45"}], "50"], 
+     RowBox[{"pf", "(", "k", ")"}]}]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.688340014079783*^9, 3.6883400341918163`*^9}, {
+  3.688340071975049*^9, 3.688340121086411*^9}, {3.6883401537708597`*^9, 
+  3.688340244262116*^9}},
+ FontSize->12],
+
+Cell["\<\
+We start at 5 because we know that it is the lowest possible outcome of the \
+game, and stop at 50 because it is the highest.\
+\>", "Text",
+ CellChangeTimes->{{3.6883393419001493`*^9, 3.6883393499709597`*^9}, {
+  3.688339752272711*^9, 3.6883399994552317`*^9}, {3.688340258949774*^9, 
+  3.6883402898936033`*^9}}]
+}, Open  ]],
+
+Cell["Discussion", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, {
+  3.688339162508295*^9, 3.688339166187951*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -288,7 +658,35 @@ Cell[TextData[{
 }], "Subsection",
  CellChangeTimes->{{3.6883380857471867`*^9, 3.688338093298911*^9}}],
 
-Cell["Read and study the following texts:", "Text"]
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9}],
+
+Cell["\<\
+To calculate the expected investment we need to to know how many times we are \
+expected to play before winning. We know that calculating the expected value \
+for a random variable that is distributed for finding the first successful \
+event can be done like this. \
+\>", "Text",
+ CellChangeTimes->{
+  3.688340346853745*^9, {3.688340438741146*^9, 3.688340482668943*^9}, {
+   3.688340561988941*^9, 3.688340608580591*^9}, {3.68834067498862*^9, 
+   3.688340710044318*^9}, 3.6883407619882393`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"\[Mu]", "=", " ", 
+   RowBox[{"1", "/", "p"}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.68834074306672*^9, 3.688340758212253*^9}},
+ FontSize->12],
+
+Cell["Where p is the probability of  a successful outcome. ", "Text",
+ CellChangeTimes->{{3.688340765772243*^9, 3.688340783123897*^9}, {
+  3.6883408602196913`*^9, 3.6883408711478367`*^9}, {3.688340952674491*^9, 
+  3.6883409592742863`*^9}}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -303,7 +701,216 @@ Cell[TextData[{
 }], "Subsection",
  CellChangeTimes->{{3.6883380857471867`*^9, 3.688338121770508*^9}}],
 
-Cell["Read and study the following texts:", "Text"]
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9}],
+
+Cell[TextData[{
+ "We used binomial distribution to calculate the probability of winning Teddy \
+after 20 games. We know that binomial distribution is used to calculate the \
+probability of the random variable ",
+ StyleBox["X", "Input"],
+ " which is defined as the amount of successful outcomes, while the \
+probability of a successful outcome p, and the amount of tries n, is already \
+defined."
+}], "Text",
+ CellChangeTimes->{{3.6883410312737017`*^9, 3.688341074881235*^9}, {
+  3.6883411768402433`*^9, 3.688341180327993*^9}, {3.68834122399188*^9, 
+  3.688341325215089*^9}, {3.688341369455114*^9, 3.6883413949189653`*^9}, {
+  3.6883414257591257`*^9, 3.688341427175215*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  StyleBox[
+   RowBox[{
+    RowBox[{"pf", "(", "k", ")"}], "=", 
+    RowBox[{
+     RowBox[{"P", "(", 
+      RowBox[{"X", "=", "k"}], ")"}], "=", 
+     TagBox[GridBox[{
+        {"\[Piecewise]", GridBox[{
+           {
+            RowBox[{
+             TemplateBox[{"n","k"},
+              "Binomial"], 
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["p", "k"], "(", 
+               RowBox[{"1", "-", "p"}], ")"}], 
+              RowBox[{"n", "-", "k"}]]}], 
+            RowBox[{"0", "\[LessEqual]", "k", "\[LessEqual]", "n"}]}
+          },
+          AllowedDimensions->{2, Automatic},
+          Editable->True,
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{1.}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.84]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}},
+          Selectable->True]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.35]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      "Piecewise",
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True,
+      Selectable->False]}]}],
+   FontWeight->"Bold"], TraditionalForm]], "DisplayFormula",
+ FontSize->12]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Discussion", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, {
+  3.688339162508295*^9, 3.688339166187951*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`], 
+    AbsoluteThickness[1.6], 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{-1.125, 0}, {-0.875, 0.}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{-0.125, 0}, {0.125, 0.806791629508865}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{0.875, 0}, {1.125, 0.17414296820143962}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{1.875, 0}, {2.125, 0.017854352754530334}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{2.875, 0}, {3.125, 0.0011561386621780632}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{3.875, 0}, {4.125, 0.00005302899760056002}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{4.875, 0}, {5.125, 1.83137785869794*^-6}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{5.875, 0}, {6.125, 4.9412011191507995*^-8}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{6.875, 0}, {7.125, 1.0665398572528706*^-9}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{7.875, 0}, {8.125, 1.8704453274407083*^-11}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{8.875, 0}, {9.125, 2.691524380979873*^-13}]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], Opacity[0.2], 
+     RectangleBox[{9.875, 0}, {10.125, 3.1952553193522583*^-15}]}}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`], 
+    AbsoluteThickness[1.6], {}, {{}, LineBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAWImKIaAT/sZUMAbNP6B/f9XvV1rc/GlPZRvj8p/Yx9b
+skAi0OsYlP8Jjf/Pnld0Q0imxyQon9EBlc/u8H/bjHyjj0FQPican9/B9faR
+6ryz3BB+gwAaX9hBVlrBYevOfXYQvggaX9xhqULiNKX2LChfAo0v7aA4z0Zh
+Y5AQlC+Dxpd3kCub/uzqhC22YL6DAir/gKLDEgvZznkfgqDySqj8A8oOXHm/
+Lh88/sYGIq8C5wMAHEtpYA==
+      "]]}, {}, {{}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{
+    FormBox["\"k\"", TraditionalForm], 
+    FormBox["\"pf(k)\"", TraditionalForm]},
+  AxesOrigin->{-1., 0},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "MessagesHead" -> DiscretePlot, "AxisPadding" -> Scaled[0.02], 
+    "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "DefaultPlotStyle" -> {
+      Directive[
+       RGBColor[0.368417, 0.506779, 0.709798], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.880722, 0.611041, 0.142051], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.560181, 0.691569, 0.194885], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.922526, 0.385626, 0.209179], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.528488, 0.470624, 0.701351], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.772079, 0.431554, 0.102387], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.363898, 0.618501, 0.782349], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[1, 0.75, 0], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.647624, 0.37816, 0.614037], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.571589, 0.586483, 0.], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.915, 0.3325, 0.2125], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], 
+       AbsoluteThickness[1.6]]}, "DomainPadding" -> Scaled[0.02], 
+    "PointSizeFunction" -> "SmallPointSize", "RangePadding" -> Scaled[0.05]},
+  PlotRange->{{-1., 10.}, {0, 1}},
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], Automatic}},
+  Ticks->{Automatic, Automatic}]], "Input"],
+
+Cell["\<\
+Here is a diagram of the binomial distribution function. It seems to coincide \
+with our result (which is close 0.2). Here we can see that the chance of \
+winning 0 times after 20 games is a little above 0.8.\
+\>", "Text",
+ CellChangeTimes->{{3.6883418162395153`*^9, 3.688341899149419*^9}, {
+  3.688341950261133*^9, 3.6883419901330957`*^9}}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 
@@ -728,8 +1335,8 @@ Cell[TextData[{
 }, Open  ]]
 },
 WindowSize->{839, 995},
-WindowMargins->{{Automatic, 259}, {Automatic, 2}},
-FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+WindowMargins->{{Automatic, 259}, {0, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -744,101 +1351,130 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 260, 4, 91, "Title"],
-Cell[843, 28, 101, 1, 49, "Subtitle"],
-Cell[947, 31, 369, 10, 57, "Text"],
+Cell[580, 22, 260, 4, 93, "Title"],
+Cell[843, 28, 101, 1, 51, "Subtitle"],
+Cell[947, 31, 361, 10, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1341, 45, 184, 6, 63, "Section"],
-Cell[1528, 53, 285, 6, 49, "Text"],
+Cell[1333, 45, 184, 6, 65, "Section"],
+Cell[1520, 53, 285, 6, 55, "Text"],
 Cell[CellGroupData[{
-Cell[1838, 63, 218, 9, 43, "Subsection"],
-Cell[2059, 74, 476, 8, 68, "Text"],
+Cell[1830, 63, 218, 9, 45, "Subsection"],
+Cell[2051, 74, 550, 9, 99, "Text"],
 Cell[CellGroupData[{
-Cell[2560, 86, 292, 3, 30, "ItemNumbered"],
-Cell[2855, 91, 202, 3, 30, "ItemNumbered"],
-Cell[3060, 96, 217, 2, 30, "ItemNumbered"],
-Cell[3280, 100, 221, 4, 30, "ItemNumbered"]
+Cell[2626, 87, 292, 3, 33, "ItemNumbered"],
+Cell[2921, 92, 202, 3, 33, "ItemNumbered"],
+Cell[3126, 97, 217, 2, 33, "ItemNumbered"],
+Cell[3346, 101, 221, 4, 33, "ItemNumbered"]
+}, Open  ]]
 }, Open  ]],
-Cell[3516, 107, 96, 1, 30, "Input"]
-}, Open  ]],
 Cell[CellGroupData[{
-Cell[3649, 113, 190, 8, 43, "Subsection"],
-Cell[3842, 123, 346, 10, 33, "Text"],
-Cell[4191, 135, 260, 5, 33, "Text"],
-Cell[4454, 142, 171, 3, 33, "Text"],
-Cell[4628, 147, 102, 2, 33, "Text"]
+Cell[3616, 111, 190, 8, 45, "Subsection"],
+Cell[3809, 121, 346, 10, 33, "Text"],
+Cell[4158, 133, 260, 5, 33, "Text"],
+Cell[4421, 140, 171, 3, 33, "Text"],
+Cell[4595, 145, 102, 2, 33, "Text"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[4767, 154, 189, 8, 35, "Subsection"],
+Cell[4734, 152, 189, 8, 37, "Subsection"],
 Cell[CellGroupData[{
-Cell[4981, 166, 91, 2, 31, "Item"],
-Cell[5075, 170, 214, 8, 31, "Item"],
-Cell[5292, 180, 148, 5, 31, "Item"],
-Cell[5443, 187, 276, 9, 31, "Item"],
-Cell[5722, 198, 139, 3, 31, "Item"],
-Cell[5864, 203, 302, 5, 51, "Item"],
-Cell[6169, 210, 204, 4, 31, "Item"]
+Cell[4948, 164, 91, 2, 31, "Item"],
+Cell[5042, 168, 214, 8, 31, "Item"],
+Cell[5259, 178, 148, 5, 31, "Item"],
+Cell[5410, 185, 276, 9, 31, "Item"],
+Cell[5689, 196, 139, 3, 31, "Item"],
+Cell[5831, 201, 302, 5, 51, "Item"],
+Cell[6136, 208, 204, 4, 31, "Item"]
 }, Closed]],
-Cell[6388, 217, 89, 1, 33, "Text"]
+Cell[6355, 215, 89, 1, 33, "Text"]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6526, 224, 169, 6, 63, "Section"],
+Cell[6493, 222, 169, 6, 65, "Section"],
 Cell[CellGroupData[{
-Cell[6720, 234, 198, 8, 43, "Subsection"],
-Cell[6921, 244, 896, 15, 125, "Text"]
+Cell[6687, 232, 198, 8, 45, "Subsection"],
+Cell[CellGroupData[{
+Cell[6910, 244, 125, 2, 35, "Subsubsection"],
+Cell[7038, 248, 790, 13, 77, "Text"],
+Cell[7831, 263, 1887, 50, 50, "Input"],
+Cell[9721, 315, 301, 5, 55, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7854, 264, 194, 8, 43, "Subsection"],
-Cell[8051, 274, 58, 1, 30, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[8146, 280, 199, 8, 43, "Subsection"],
-Cell[8348, 290, 51, 0, 30, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[8436, 295, 211, 8, 43, "Subsection"],
-Cell[8650, 305, 51, 0, 30, "Text"]
+Cell[10059, 325, 150, 2, 35, "Subsubsection"],
+Cell[10212, 329, 13079, 241, 249, "Output"],
+Cell[23294, 572, 124, 1, 33, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8750, 311, 155, 5, 63, "Section"],
-Cell[8908, 318, 283, 5, 70, "Text"],
-Cell[9194, 325, 89, 1, 70, "Text"],
-Cell[9286, 328, 150, 4, 70, "Text"],
-Cell[9439, 334, 219, 5, 70, "Text"],
+Cell[23467, 579, 194, 8, 45, "Subsection"],
 Cell[CellGroupData[{
-Cell[9683, 343, 62, 1, 70, "Subsection"],
-Cell[9748, 346, 278, 7, 70, "Text"],
-Cell[10029, 355, 13080, 243, 70, "Text"],
-Cell[23112, 600, 669, 17, 70, "Text"],
-Cell[23784, 619, 525, 17, 70, "Text"],
+Cell[23686, 591, 125, 2, 35, "Subsubsection"],
+Cell[23814, 595, 690, 18, 99, "Text"],
+Cell[24507, 615, 612, 17, 62, "Input"],
+Cell[25122, 634, 321, 6, 55, "Text"]
+}, Open  ]],
+Cell[25458, 643, 150, 2, 35, "Subsubsection"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[24334, 640, 153, 5, 70, "Item"],
-Cell[24490, 647, 120, 3, 70, "Item"],
-Cell[24613, 652, 106, 1, 70, "Item"],
-Cell[24722, 655, 123, 3, 70, "Item"]
+Cell[25645, 650, 199, 8, 45, "Subsection"],
+Cell[CellGroupData[{
+Cell[25869, 662, 125, 2, 35, "Subsubsection"],
+Cell[25997, 666, 503, 9, 77, "Text"],
+Cell[26503, 677, 191, 5, 34, "Input"],
+Cell[26697, 684, 239, 3, 33, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24894, 664, 70, 1, 70, "Subsection"],
-Cell[24967, 667, 468, 14, 70, "Text"],
+Cell[26985, 693, 211, 8, 45, "Subsection"],
 Cell[CellGroupData[{
-Cell[25460, 685, 112, 3, 70, "Item"],
-Cell[25575, 690, 63, 0, 70, "Item"]
+Cell[27221, 705, 125, 2, 35, "Subsubsection"],
+Cell[27349, 709, 673, 12, 99, "Text"],
+Cell[28025, 723, 2106, 59, 39, "DisplayFormula"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30168, 787, 150, 2, 35, "Subsubsection"],
+Cell[30321, 791, 5149, 112, 253, "Input"],
+Cell[35473, 905, 351, 6, 55, "Text"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25687, 696, 66, 1, 70, "Subsection"],
-Cell[25756, 699, 140, 3, 70, "Text"],
+Cell[35885, 918, 155, 5, 65, "Section"],
+Cell[36043, 925, 283, 5, 70, "Text"],
+Cell[36329, 932, 89, 1, 70, "Text"],
+Cell[36421, 935, 150, 4, 70, "Text"],
+Cell[36574, 941, 219, 5, 70, "Text"],
 Cell[CellGroupData[{
-Cell[25921, 706, 134, 3, 70, "Item"],
-Cell[26058, 711, 121, 3, 70, "Item"],
-Cell[26182, 716, 52, 0, 70, "Item"]
+Cell[36818, 950, 62, 1, 70, "Subsection"],
+Cell[36883, 953, 278, 7, 70, "Text"],
+Cell[37164, 962, 13080, 243, 70, "Text"],
+Cell[50247, 1207, 669, 17, 70, "Text"],
+Cell[50919, 1226, 525, 17, 70, "Text"],
+Cell[CellGroupData[{
+Cell[51469, 1247, 153, 5, 70, "Item"],
+Cell[51625, 1254, 120, 3, 70, "Item"],
+Cell[51748, 1259, 106, 1, 70, "Item"],
+Cell[51857, 1262, 123, 3, 70, "Item"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52029, 1271, 70, 1, 70, "Subsection"],
+Cell[52102, 1274, 468, 14, 70, "Text"],
+Cell[CellGroupData[{
+Cell[52595, 1292, 112, 3, 70, "Item"],
+Cell[52710, 1297, 63, 0, 70, "Item"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52822, 1303, 66, 1, 70, "Subsection"],
+Cell[52891, 1306, 140, 3, 70, "Text"],
+Cell[CellGroupData[{
+Cell[53056, 1313, 134, 3, 70, "Item"],
+Cell[53193, 1318, 121, 3, 70, "Item"],
+Cell[53317, 1323, 52, 0, 70, "Item"]
 }, Open  ]]
 }, Open  ]]
 }, Closed]],
-Cell[26273, 721, 148, 5, 49, "Section"]
+Cell[53408, 1328, 148, 5, 51, "Section"]
 }, Open  ]]
 }
 ]
