@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     87825,       2520]
-NotebookOptionsPosition[     79323,       2228]
-NotebookOutlinePosition[     79662,       2243]
-CellTagsIndexPosition[     79619,       2240]
+NotebookDataLength[     88025,       2468]
+NotebookOptionsPosition[     79502,       2184]
+NotebookOutlinePosition[     79841,       2199]
+CellTagsIndexPosition[     79798,       2196]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -281,16 +281,58 @@ Cell["Description", "Subsubsection",
  CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
    3.688339206676055*^9, {3.688343885127437*^9, 3.6883438872876377`*^9}}],
 
-Cell["\<\
-This assignment is based on a dice game. There are five dice in the form of \
-the Platonic solids (one die with 4 possible outcomes, one with 6, one with \
-8, one with 12, and one with 20). All dice are thrown at once, and if the sum \
-of all dice are 10 or below, or 45 or higher, the player win a Teddy bear to \
-bring home (each game costs 2 euro). We will:\
-\>", "Text",
+Cell["For the third sub-assignment we will:", "Text",
  CellChangeTimes->{{3.6883372288328733`*^9, 3.688337277992319*^9}, {
   3.688337312256084*^9, 3.688337522150441*^9}, {3.688340549612856*^9, 
-  3.688340554876917*^9}}]
+  3.688340554876917*^9}, {3.688347319722639*^9, 3.6883473313625193`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Determine the expectation values and standard deviations of the distributions \
+in the Teddy and the car case..\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.6883372866152573`*^9, 3.6883373082879457`*^9}, {
+   3.688337527086372*^9, 3.688337528400094*^9}, {3.688337570365749*^9, 
+   3.6883375705581903`*^9}, 3.688337614917563*^9, 3.688337784340906*^9, {
+   3.688343910383457*^9, 3.688343924527417*^9}, 3.688343975590931*^9, {
+   3.688344268181191*^9, 3.6883442930291243`*^9}, 3.6883473571056128`*^9}],
+
+Cell["\<\
+Determine the probabilities of the Teddy prize and the car prize using the \
+normal distribution.\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.6883372866152573`*^9, 3.6883373082879457`*^9}, {
+   3.688337527086372*^9, 3.68833754800737*^9}, 3.6883439423163548`*^9, {
+   3.688344007633802*^9, 3.688344038496764*^9}, {3.6883442798615847`*^9, 
+   3.688344290437138*^9}, 3.68834736237954*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Result", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9, {3.688343891055583*^9, 3.688343891703444*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["", "ItemNumbered",
+ CellChangeTimes->{{3.6883372866152573`*^9, 3.6883373082879457`*^9}, {
+   3.688337527086372*^9, 3.688337528400094*^9}, {3.688337570365749*^9, 
+   3.6883375705581903`*^9}, 3.688337614917563*^9, 3.688337784340906*^9, {
+   3.688343910383457*^9, 3.688343924527417*^9}, 3.688343975590931*^9, {
+   3.688344268181191*^9, 3.6883442930291243`*^9}, {3.688344360084448*^9, 
+   3.6883443640280743`*^9}, {3.688346137666086*^9, 3.688346148026119*^9}, {
+   3.688346221009582*^9, 3.688346222409636*^9}, 3.688348861433303*^9}],
+
+Cell["", "ItemNumbered",
+ CellChangeTimes->{{3.6883372866152573`*^9, 3.6883373082879457`*^9}, {
+   3.688337527086372*^9, 3.68833754800737*^9}, 3.6883439423163548`*^9, {
+   3.688344007633802*^9, 3.688344038496764*^9}, {3.6883442798615847`*^9, 
+   3.688344290437138*^9}, {3.688344411141013*^9, 3.688344418509015*^9}, {
+   3.688346208185595*^9, 3.6883462183857803`*^9}, 3.688348862878042*^9}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -338,108 +380,62 @@ to the amount of faces the die has. \
    3.6883389125565147`*^9}, {3.6883392439160843`*^9, 3.688339257691678*^9}, {
    3.688339337123214*^9, 3.6883393561151667`*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  FormBox[
-  RowBox[{
-   RowBox[{"pf", "(", "k", ")"}], "=", 
+  StyleBox[
    RowBox[{
-    RowBox[{"P", "(", 
-     RowBox[{"X", "=", "k"}], ")"}], "=", 
-    TagBox[GridBox[{
-       {"\[Piecewise]", GridBox[{
-          {
-           RowBox[{"1", "/", "m"}], 
-           RowBox[{"1", "\[LessEqual]", "k", "\[LessEqual]", "m"}]},
-          {"0", "otherwise"}
-         },
-         AllowedDimensions->{2, Automatic},
-         Editable->True,
-         GridBoxAlignment->{
-          "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
-           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-         GridBoxItemSize->{
-          "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, 
-           "Rows" -> {{1.}}, "RowsIndexed" -> {}},
-         GridBoxSpacings->{"Columns" -> {
-             Offset[0.27999999999999997`], {
-              Offset[0.84]}, 
-             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-             Offset[0.2], {
-              Offset[0.4]}, 
-             Offset[0.2]}, "RowsIndexed" -> {}},
-         Selectable->True]}
-      },
-      GridBoxAlignment->{
-       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-        "RowsIndexed" -> {}},
-      GridBoxItemSize->{
-       "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
-        "RowsIndexed" -> {}},
-      GridBoxSpacings->{"Columns" -> {
-          Offset[0.27999999999999997`], {
-           Offset[0.35]}, 
-          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-          Offset[0.2], {
-           Offset[0.4]}, 
-          Offset[0.2]}, "RowsIndexed" -> {}}],
-     "Piecewise",
-     DeleteWithContents->True,
-     Editable->False,
-     SelectWithContents->True,
-     Selectable->False]}]}], TraditionalForm]], "Code",
+    RowBox[{"pf", "(", "k", ")"}], "=", 
+    RowBox[{
+     RowBox[{"P", "(", 
+      RowBox[{"X", "=", "k"}], ")"}], "=", 
+     TagBox[GridBox[{
+        {"\[Piecewise]", GridBox[{
+           {
+            RowBox[{"1", "/", "m"}], 
+            RowBox[{"1", "\[LessEqual]", "k", "\[LessEqual]", "m"}]},
+           {"0", "otherwise"}
+          },
+          AllowedDimensions->{2, Automatic},
+          Editable->True,
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{1.}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.84]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}},
+          Selectable->True]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.35]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      "Piecewise",
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True,
+      Selectable->False]}]}],
+   FontWeight->"Bold"], TraditionalForm]], "DisplayFormula",
  CellChangeTimes->{{3.688339362124299*^9, 3.6883393739066687`*^9}, {
-  3.688339479247428*^9, 3.68833951340204*^9}}],
-
-Cell[BoxData[
- TagBox[GridBox[{
-    {"\[Piecewise]", GridBox[{
-       {
-        FractionBox["1", "m"], 
-        RowBox[{"1", "\[LessEqual]", "k", "\[LessEqual]", "m"}]},
-       {"0", 
-        TagBox["True",
-         "PiecewiseDefault",
-         AutoDelete->True]}
-      },
-      AllowedDimensions->{2, Automatic},
-      Editable->True,
-      GridBoxAlignment->{
-       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-        "RowsIndexed" -> {}},
-      GridBoxItemSize->{
-       "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
-        "RowsIndexed" -> {}},
-      GridBoxSpacings->{"Columns" -> {
-          Offset[0.27999999999999997`], {
-           Offset[0.84]}, 
-          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-          Offset[0.2], {
-           Offset[0.4]}, 
-          Offset[0.2]}, "RowsIndexed" -> {}},
-      Selectable->True]}
-   },
-   GridBoxAlignment->{
-    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-     "RowsIndexed" -> {}},
-   GridBoxItemSize->{
-    "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
-     "RowsIndexed" -> {}},
-   GridBoxSpacings->{"Columns" -> {
-       Offset[0.27999999999999997`], {
-        Offset[0.35]}, 
-       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-       Offset[0.2], {
-        Offset[0.4]}, 
-       Offset[0.2]}, "RowsIndexed" -> {}}],
-  "Piecewise",
-  DeleteWithContents->True,
-  Editable->False,
-  SelectWithContents->True,
-  Selectable->False]], "Output",
- CellChangeTimes->{3.688345189121149*^9}]
-}, Open  ]],
+  3.688339479247428*^9, 3.68833951340204*^9}, {3.688348369847663*^9, 
+  3.688348371029385*^9}}],
 
 Cell["\<\
 Then we performed Convolutions in order. First with die 1 and 2, then we took \
@@ -895,43 +891,26 @@ probability."
  CellChangeTimes->{{3.6883393419001493`*^9, 3.6883393499709597`*^9}, {
   3.688339752272711*^9, 3.6883399994552317`*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  FormBox[
-  RowBox[{
-   RowBox[{"P", "(", 
-    RowBox[{"X", "=", "\"\<winning teddy\>\""}], ")"}], "=", " ", 
+  StyleBox[
    RowBox[{
+    RowBox[{"P", "(", 
+     RowBox[{"X", "=", "\"\<winning teddy\>\""}], ")"}], "=", " ", 
     RowBox[{
-     UnderoverscriptBox["\[Sum]", 
-      RowBox[{"k", "=", "5"}], "10"], 
-     RowBox[{"pf", "(", "k", ")"}]}], " ", "+", 
-    RowBox[{
-     UnderoverscriptBox["\[Sum]", 
-      RowBox[{"k", "=", "45"}], "50"], 
-     RowBox[{"pf", "(", "k", ")"}]}]}]}], TraditionalForm]], "Code",
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"k", "=", "5"}], "10"], 
+      RowBox[{"pf", "(", "k", ")"}]}], " ", "+", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"k", "=", "45"}], "50"], 
+      RowBox[{"pf", "(", "k", ")"}]}]}]}],
+   FontWeight->"Bold"], TraditionalForm]], "DisplayFormula",
  CellChangeTimes->{{3.688340014079783*^9, 3.6883400341918163`*^9}, {
    3.688340071975049*^9, 3.688340121086411*^9}, {3.6883401537708597`*^9, 
-   3.688340244262116*^9}, 3.688342728576105*^9, 3.688343445298588*^9},
- FontSize->12],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"pf", "[", "5", "]"}], "+", 
-  RowBox[{"pf", "[", "6", "]"}], "+", 
-  RowBox[{"pf", "[", "7", "]"}], "+", 
-  RowBox[{"pf", "[", "8", "]"}], "+", 
-  RowBox[{"pf", "[", "9", "]"}], "+", 
-  RowBox[{"pf", "[", "10", "]"}], "+", 
-  RowBox[{"pf", "[", "45", "]"}], "+", 
-  RowBox[{"pf", "[", "46", "]"}], "+", 
-  RowBox[{"pf", "[", "47", "]"}], "+", 
-  RowBox[{"pf", "[", "48", "]"}], "+", 
-  RowBox[{"pf", "[", "49", "]"}], "+", 
-  RowBox[{"pf", "[", "50", "]"}]}]], "Output",
- CellChangeTimes->{3.688345191453311*^9}]
-}, Open  ]],
+   3.688340244262116*^9}, 3.688342728576105*^9, 3.688343445298588*^9, {
+   3.688348357319723*^9, 3.6883483575178747`*^9}}],
 
 Cell["\<\
 We start at 5 because we know that it is the lowest possible outcome of the \
@@ -1006,20 +985,15 @@ event can be done like this. \
    3.688340561988941*^9, 3.688340608580591*^9}, {3.68834067498862*^9, 
    3.688340710044318*^9}, 3.6883407619882393`*^9}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  FormBox[
-  RowBox[{"\[Mu]", "=", " ", 
-   RowBox[{"1", "/", "p"}]}], TraditionalForm]], "Code",
+  StyleBox[
+   RowBox[{"\[Mu]", "=", " ", 
+    RowBox[{"1", "/", "p"}]}],
+   FontWeight->"Bold"], TraditionalForm]], "DisplayFormula",
  CellChangeTimes->{{3.68834074306672*^9, 3.688340758212253*^9}, {
-  3.688343429474656*^9, 3.688343441186536*^9}},
- FontSize->12],
-
-Cell[BoxData[
- FractionBox["3840", "41"]], "Output",
- CellChangeTimes->{3.6883451915201473`*^9}]
-}, Open  ]],
+  3.688343429474656*^9, 3.688343441186536*^9}, {3.68834831253469*^9, 
+  3.688348320790883*^9}}],
 
 Cell["Where p is the probability of  a successful outcome. ", "Text",
  CellChangeTimes->{{3.688343529544422*^9, 3.68834353648945*^9}}],
@@ -1030,17 +1004,13 @@ the cost (2 euros).\
 \>", "Text",
  CellChangeTimes->{{3.688343468886272*^9, 3.6883435257859497`*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  FormBox[
-  RowBox[{"\[Mu]", "*", "2"}], TraditionalForm]], "Code",
- CellChangeTimes->{{3.688343550121655*^9, 3.68834355208173*^9}}],
-
-Cell[BoxData[
- FractionBox["7680", "41"]], "Output",
- CellChangeTimes->{3.688345191546535*^9}]
-}, Open  ]]
+  StyleBox[
+   RowBox[{"\[Mu]", "\[Times]", "2"}],
+   FontWeight->"Bold"], TraditionalForm]], "DisplayFormula",
+ CellChangeTimes->{{3.688343550121655*^9, 3.68834355208173*^9}, {
+  3.688348280709927*^9, 3.688348297773798*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1104,8 +1074,6 @@ defined."
   3.688341325215089*^9}, {3.688341369455114*^9, 3.6883413949189653`*^9}, {
   3.6883414257591257`*^9, 3.688341427175215*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  FormBox[
   StyleBox[
@@ -1164,67 +1132,8 @@ Cell[BoxData[
       Editable->False,
       SelectWithContents->True,
       Selectable->False]}]}],
-   FontWeight->"Bold"], TraditionalForm]], "Code",
- FontSize->12],
-
-Cell[BoxData[
- TagBox[GridBox[{
-    {"\[Piecewise]", GridBox[{
-       {
-        RowBox[{
-         SuperscriptBox[
-          RowBox[{
-           SuperscriptBox[
-            RowBox[{"(", 
-             FractionBox["41", "3840"], ")"}], "k"], "[", 
-           FractionBox["3799", "3840"], "]"}], 
-          RowBox[{
-           RowBox[{"-", "k"}], "+", "n"}]], " ", 
-         RowBox[{"Binomial", "[", 
-          RowBox[{"n", ",", "k"}], "]"}]}], 
-        RowBox[{"0", "\[LessEqual]", "k", "\[LessEqual]", "n"}]},
-       {"0", 
-        TagBox["True",
-         "PiecewiseDefault",
-         AutoDelete->True]}
-      },
-      AllowedDimensions->{2, Automatic},
-      Editable->True,
-      GridBoxAlignment->{
-       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-        "RowsIndexed" -> {}},
-      GridBoxItemSize->{
-       "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
-        "RowsIndexed" -> {}},
-      GridBoxSpacings->{"Columns" -> {
-          Offset[0.27999999999999997`], {
-           Offset[0.84]}, 
-          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-          Offset[0.2], {
-           Offset[0.4]}, 
-          Offset[0.2]}, "RowsIndexed" -> {}},
-      Selectable->True]}
-   },
-   GridBoxAlignment->{
-    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-     "RowsIndexed" -> {}},
-   GridBoxItemSize->{
-    "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
-     "RowsIndexed" -> {}},
-   GridBoxSpacings->{"Columns" -> {
-       Offset[0.27999999999999997`], {
-        Offset[0.35]}, 
-       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-       Offset[0.2], {
-        Offset[0.4]}, 
-       Offset[0.2]}, "RowsIndexed" -> {}}],
-  "Piecewise",
-  DeleteWithContents->True,
-  Editable->False,
-  SelectWithContents->True,
-  Selectable->False]], "Output",
- CellChangeTimes->{3.688345191620352*^9}]
-}, Open  ]]
+   FontWeight->"Bold"], TraditionalForm]], "DisplayFormula",
+ CellChangeTimes->{{3.688348268279963*^9, 3.688348269230035*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1441,10 +1350,11 @@ winning 0 times after 20 games is a little above 0.8.\
 
 Cell[CellGroupData[{
 
-Cell["Code INTE KLAR", "Subsubsection",
+Cell["Code", "Subsubsection",
  CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, {
   3.688339162508295*^9, 3.688339166187951*^9}, {3.6883424648359222`*^9, 
-  3.6883424653138523`*^9}, {3.688345011432764*^9, 3.6883450125764303`*^9}}],
+  3.6883424653138523`*^9}, {3.688345011432764*^9, 3.6883450125764303`*^9}, {
+  3.688347507361436*^9, 3.688347507537098*^9}}],
 
 Cell[BoxData[
  RowBox[{"ClearAll", "[", "\"\<`*\>\"", "]"}]], "Input"],
@@ -1686,20 +1596,15 @@ This is done the same way as in section 2.3. We used to following formula\
   3.688341950261133*^9, 3.6883419901330957`*^9}, {3.6883445425312653`*^9, 
   3.688344584739194*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  FormBox[
-  RowBox[{"\[Mu]", "=", " ", 
-   RowBox[{"1", "/", "p"}]}], TraditionalForm]], "Code",
+  StyleBox[
+   RowBox[{"\[Mu]", "=", " ", 
+    RowBox[{"1", "/", "p"}]}],
+   FontWeight->"Bold"], TraditionalForm]], "DisplayFormula",
  CellChangeTimes->{{3.68834074306672*^9, 3.688340758212253*^9}, {
   3.688343429474656*^9, 3.688343441186536*^9}, {3.6883446002591047`*^9, 
-  3.68834460337099*^9}},
- FontSize->12],
-
-Cell[BoxData["1"], "Output",
- CellChangeTimes->{3.68834519438043*^9}]
-}, Open  ]],
+  3.68834460337099*^9}, {3.688348246712421*^9, 3.688348247445868*^9}}],
 
 Cell["Which is the expected amount of tries before winning.", "Text",
  CellChangeTimes->{{3.6883418162395153`*^9, 3.688341899149419*^9}, {
@@ -1712,17 +1617,16 @@ the cost (250 euros).\
 \>", "Text",
  CellChangeTimes->{{3.688344641315805*^9, 3.68834467062667*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  FormBox[
-  RowBox[{"\[Mu]", "*", "250"}], TraditionalForm]], "Code",
+  RowBox[{
+   StyleBox["\[Mu]",
+    FontWeight->"Bold"], "\[Times]", 
+   StyleBox["250",
+    FontWeight->"Bold"]}], TraditionalForm]], "DisplayFormula",
  CellChangeTimes->{{3.688343550121655*^9, 3.68834355208173*^9}, {
-  3.6883446668907013`*^9, 3.688344666954727*^9}}],
-
-Cell[BoxData["250"], "Output",
- CellChangeTimes->{3.688345194413638*^9}]
-}, Open  ]]
+  3.6883446668907013`*^9, 3.688344666954727*^9}, {3.688348220435504*^9, 
+  3.6883482239176483`*^9}, {3.688348446804912*^9, 3.68834844970157*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1793,9 +1697,86 @@ Teddy and the car case"
   3.6883445611314297`*^9, 3.688344568635379*^9}, {3.688345277022442*^9, 
   3.6883452828230877`*^9}}],
 
+Cell[CellGroupData[{
+
 Cell["Solution", "Subsubsection",
  CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
    3.688339206676055*^9}],
+
+Cell["\<\
+The formula for calculating the expected values for a discrete probability \
+function is \
+\>", "Text",
+ CellChangeTimes->{{3.688344641315805*^9, 3.68834467062667*^9}, 
+   3.688347681647572*^9, {3.688347754191122*^9, 3.688347765663055*^9}, {
+   3.688347804943035*^9, 3.688347848534842*^9}, 3.688348062549828*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\[Mu]",
+   FontWeight->"Bold"], "=", 
+  StyleBox[
+   RowBox[{
+    UnderscriptBox["\[Sum]", 
+     RowBox[{"\[ForAll]", "x"}]], 
+    RowBox[{"x", " ", "pf", 
+     RowBox[{"(", "x", ")"}]}]}],
+   FontWeight->"Bold"]}]], "DisplayFormula",
+ CellChangeTimes->{{3.688348078310856*^9, 3.688348170621991*^9}, {
+   3.688348208159984*^9, 3.688348209357834*^9}, 3.6883484681011257`*^9, {
+   3.688348582828476*^9, 3.688348584076344*^9}}],
+
+Cell["And the formula for variance is ", "Text",
+ CellChangeTimes->{{3.688344641315805*^9, 3.68834467062667*^9}, 
+   3.688347681647572*^9, {3.688347754191122*^9, 3.688347765663055*^9}, {
+   3.688347804943035*^9, 3.688347848534842*^9}, 3.688348062549828*^9, {
+   3.6883484995963917`*^9, 3.688348507428412*^9}, {3.688348738675667*^9, 
+   3.6883487508831577`*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   SuperscriptBox["\[Sigma]", "2"], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      UnderscriptBox["\[Sum]", 
+       RowBox[{"\[ForAll]", "x"}]], 
+      RowBox[{
+       SuperscriptBox["x", "2"], " ", "pf", 
+       RowBox[{"(", "x", ")"}]}]}], ")"}], " ", "-", " ", 
+    SuperscriptBox["\[Mu]", "2"]}]}],
+  FontWeight->"Bold"]], "DisplayFormula",
+ CellChangeTimes->{{3.688348562738986*^9, 3.6883486539244957`*^9}}],
+
+Cell["The formula for calculating the standard deviation is", "Text",
+ CellChangeTimes->{{3.688344641315805*^9, 3.68834467062667*^9}, 
+   3.688347681647572*^9, {3.688347754191122*^9, 3.688347765663055*^9}, {
+   3.688347804943035*^9, 3.688347848534842*^9}, 3.688348062549828*^9, {
+   3.6883484995963917`*^9, 3.688348507428412*^9}, {3.688348665715721*^9, 
+   3.688348700875622*^9}, {3.6883487700910807`*^9, 3.688348796124209*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\[Sigma]",
+   FontWeight->"Bold"], 
+  StyleBox[" ",
+   FontWeight->"Bold"], 
+  StyleBox["=",
+   FontWeight->"Bold"], 
+  StyleBox[" ",
+   FontWeight->"Bold"], 
+  SqrtBox[
+   SuperscriptBox["\[Sigma]", "2"]]}]], "DisplayFormula",
+ CellChangeTimes->{{3.688348806667118*^9, 3.688348826343424*^9}}],
+
+Cell["We simply used those formulas to implement our code.", "Text",
+ CellChangeTimes->{{3.688344641315805*^9, 3.68834467062667*^9}, 
+   3.688347681647572*^9, {3.688347754191122*^9, 3.688347765663055*^9}, {
+   3.688347804943035*^9, 3.688347848534842*^9}, 3.688348062549828*^9, {
+   3.6883484995963917`*^9, 3.688348507428412*^9}, {3.688348665715721*^9, 
+   3.688348700875622*^9}}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -2197,31 +2178,6 @@ Cell[BoxData["0.0013264555946008076`"], "Output",
  CellChangeTimes->{3.6883469329460287`*^9}]
 }, Open  ]]
 }, Open  ]]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[TextData[{
- 
- CounterBox["Section"],
- ".",
- 
- CounterBox["Subsection"],
- " Comparison with section 2, and 3 "
-}], "Subsection",
- CellChangeTimes->{{3.68833807029881*^9, 3.688338079218799*^9}, {
-  3.6883445611314297`*^9, 3.688344568635379*^9}, {3.688345057032627*^9, 
-  3.68834507835246*^9}}],
-
-Cell[CellGroupData[{
-
-Cell["Solution", "Subsubsection",
- CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
-   3.688339206676055*^9}],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.688344472766127*^9, 3.688344474179907*^9}}]
-}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -2293,231 +2249,223 @@ Cell[CellGroupData[{
 Cell[9566, 267, 189, 8, 45, "Subsection"],
 Cell[CellGroupData[{
 Cell[9780, 279, 176, 2, 35, "Subsubsection"],
-Cell[9959, 283, 550, 9, 99, "Text"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
+Cell[9959, 283, 267, 3, 33, "Text"],
 Cell[CellGroupData[{
-Cell[10570, 299, 169, 6, 65, "Section"],
-Cell[CellGroupData[{
-Cell[10764, 309, 198, 8, 45, "Subsection"],
-Cell[CellGroupData[{
-Cell[10987, 321, 125, 2, 35, "Subsubsection"],
-Cell[11115, 325, 790, 13, 77, "Text"],
-Cell[CellGroupData[{
-Cell[11930, 342, 1886, 50, 71, "Code"],
-Cell[13819, 394, 1593, 46, 60, "Output"]
-}, Open  ]],
-Cell[15427, 443, 301, 5, 55, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[15765, 453, 150, 2, 35, "Subsubsection"],
-Cell[15918, 457, 13079, 241, 249, "Output"],
-Cell[29000, 700, 124, 1, 33, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[29161, 706, 195, 3, 35, "Subsubsection"],
-Cell[29359, 711, 70, 1, 32, "Input"],
-Cell[29432, 714, 1607, 44, 126, "Input"],
-Cell[31042, 760, 1847, 49, 125, "Input"],
-Cell[CellGroupData[{
-Cell[32914, 813, 453, 10, 34, "Input"],
-Cell[33370, 825, 151, 2, 32, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[33558, 832, 129, 2, 32, "Input"],
-Cell[33690, 836, 413, 6, 49, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[34140, 847, 127, 2, 32, "Input"],
-Cell[34270, 851, 145, 3, 49, "Output"]
-}, Open  ]]
+Cell[10251, 290, 507, 8, 53, "ItemNumbered"],
+Cell[10761, 300, 395, 7, 53, "ItemNumbered"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34476, 861, 194, 8, 45, "Subsection"],
+Cell[11205, 313, 169, 2, 35, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[34695, 873, 125, 2, 35, "Subsubsection"],
-Cell[34823, 877, 690, 18, 99, "Text"],
-Cell[CellGroupData[{
-Cell[35538, 899, 657, 17, 83, "Code"],
-Cell[36198, 918, 547, 14, 55, "Output"]
-}, Open  ]],
-Cell[36760, 935, 321, 6, 55, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[37118, 946, 193, 3, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[37336, 953, 562, 16, 34, "Input"],
-Cell[37901, 971, 143, 3, 49, "Output"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[38105, 981, 199, 8, 45, "Subsection"],
-Cell[CellGroupData[{
-Cell[38329, 993, 125, 2, 35, "Subsubsection"],
-Cell[38457, 997, 503, 9, 77, "Text"],
-Cell[CellGroupData[{
-Cell[38985, 1010, 239, 6, 55, "Code"],
-Cell[39227, 1018, 96, 2, 49, "Output"]
-}, Open  ]],
-Cell[39338, 1023, 134, 1, 33, "Text"],
-Cell[39475, 1026, 189, 4, 33, "Text"],
-Cell[CellGroupData[{
-Cell[39689, 1034, 146, 3, 52, "Code"],
-Cell[39838, 1039, 94, 2, 49, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[39981, 1047, 197, 3, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[40203, 1054, 422, 11, 32, "Input"],
-Cell[40628, 1067, 134, 2, 32, "Output"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[40823, 1076, 211, 8, 45, "Subsection"],
-Cell[CellGroupData[{
-Cell[41059, 1088, 125, 2, 35, "Subsubsection"],
-Cell[41187, 1092, 673, 12, 99, "Text"],
-Cell[CellGroupData[{
-Cell[41885, 1108, 2096, 59, 71, "Code"],
-Cell[43984, 1169, 1931, 56, 62, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[45964, 1231, 150, 2, 35, "Subsubsection"],
-Cell[46117, 1235, 5448, 118, 306, "Text"],
-Cell[51568, 1355, 351, 6, 55, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[51956, 1366, 193, 3, 35, "Subsubsection"],
-Cell[52152, 1371, 407, 7, 34, "Input"],
-Cell[CellGroupData[{
-Cell[52584, 1382, 499, 13, 56, "Input"],
-Cell[53086, 1397, 113, 1, 32, "Output"]
+Cell[11399, 319, 534, 7, 33, "ItemNumbered"],
+Cell[11936, 328, 389, 5, 33, "ItemNumbered"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[53272, 1406, 155, 5, 65, "Section"],
+Cell[12398, 341, 169, 6, 65, "Section"],
 Cell[CellGroupData[{
-Cell[53452, 1415, 241, 9, 45, "Subsection"],
+Cell[12592, 351, 198, 8, 45, "Subsection"],
 Cell[CellGroupData[{
-Cell[53718, 1428, 125, 2, 35, "Subsubsection"],
-Cell[53846, 1432, 351, 6, 55, "Text"]
+Cell[12815, 363, 125, 2, 35, "Subsubsection"],
+Cell[12943, 367, 790, 13, 77, "Text"],
+Cell[13736, 382, 2050, 55, 49, "DisplayFormula"],
+Cell[15789, 439, 301, 5, 55, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[54234, 1443, 255, 3, 35, "Subsubsection"],
-Cell[54492, 1448, 70, 1, 32, "Input"],
-Cell[54565, 1451, 1607, 44, 126, "Input"],
-Cell[56175, 1497, 1784, 47, 103, "Input"],
-Cell[57962, 1546, 2595, 74, 241, "Input"],
-Cell[CellGroupData[{
-Cell[60582, 1624, 607, 18, 34, "Input"],
-Cell[61192, 1644, 177, 3, 49, "Output"]
+Cell[16127, 449, 150, 2, 35, "Subsubsection"],
+Cell[16280, 453, 13079, 241, 249, "Output"],
+Cell[29362, 696, 124, 1, 33, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[61406, 1652, 120, 2, 32, "Input"],
-Cell[61529, 1656, 90, 1, 32, "Output"]
+Cell[29523, 702, 195, 3, 35, "Subsubsection"],
+Cell[29721, 707, 70, 1, 32, "Input"],
+Cell[29794, 710, 1607, 44, 126, "Input"],
+Cell[31404, 756, 1847, 49, 125, "Input"],
+Cell[CellGroupData[{
+Cell[33276, 809, 453, 10, 34, "Input"],
+Cell[33732, 821, 151, 2, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33920, 828, 129, 2, 32, "Input"],
+Cell[34052, 832, 413, 6, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34502, 843, 127, 2, 32, "Input"],
+Cell[34632, 847, 145, 3, 49, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[61680, 1664, 245, 9, 45, "Subsection"],
+Cell[34838, 857, 194, 8, 45, "Subsection"],
 Cell[CellGroupData[{
-Cell[61950, 1677, 125, 2, 35, "Subsubsection"],
-Cell[62078, 1681, 267, 5, 33, "Text"],
-Cell[CellGroupData[{
-Cell[62370, 1690, 289, 7, 55, "Code"],
-Cell[62662, 1699, 69, 1, 32, "Output"]
-}, Open  ]],
-Cell[62746, 1703, 285, 3, 33, "Text"],
-Cell[63034, 1708, 188, 4, 33, "Text"],
-Cell[CellGroupData[{
-Cell[63247, 1716, 199, 4, 52, "Code"],
-Cell[63449, 1722, 72, 1, 32, "Output"]
-}, Open  ]]
+Cell[35057, 869, 125, 2, 35, "Subsubsection"],
+Cell[35185, 873, 690, 18, 99, "Text"],
+Cell[35878, 893, 752, 19, 63, "DisplayFormula"],
+Cell[36633, 914, 321, 6, 55, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[63570, 1729, 197, 3, 35, "Subsubsection"],
+Cell[36991, 925, 193, 3, 35, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[63792, 1736, 417, 10, 32, "Input"],
-Cell[64212, 1748, 276, 4, 49, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[64525, 1757, 196, 5, 32, "Input"],
-Cell[64724, 1764, 113, 1, 32, "Output"]
-}, Open  ]]
+Cell[37209, 932, 562, 16, 34, "Input"],
+Cell[37774, 950, 143, 3, 49, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[64910, 1773, 148, 5, 65, "Section"],
+Cell[37978, 960, 199, 8, 45, "Subsection"],
 Cell[CellGroupData[{
-Cell[65083, 1782, 365, 11, 71, "Subsection"],
-Cell[65451, 1795, 125, 2, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[65601, 1801, 171, 2, 29, "Subsubsection"],
-Cell[65775, 1805, 70, 1, 32, "Input"],
-Cell[65848, 1808, 1607, 44, 126, "Input"],
-Cell[67458, 1854, 1784, 47, 103, "Input"],
-Cell[69245, 1903, 2595, 74, 241, "Input"],
-Cell[71843, 1979, 186, 4, 32, "Input"],
-Cell[CellGroupData[{
-Cell[72054, 1987, 398, 10, 34, "Input"],
-Cell[72455, 1999, 91, 2, 49, "Output"]
+Cell[38202, 972, 125, 2, 35, "Subsubsection"],
+Cell[38330, 976, 503, 9, 77, "Text"],
+Cell[38836, 987, 320, 8, 27, "DisplayFormula"],
+Cell[39159, 997, 134, 1, 33, "Text"],
+Cell[39296, 1000, 189, 4, 33, "Text"],
+Cell[39488, 1006, 249, 6, 27, "DisplayFormula"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[72583, 2006, 476, 13, 34, "Input"],
-Cell[73062, 2021, 117, 2, 49, "Output"]
-}, Open  ]],
+Cell[39774, 1017, 197, 3, 35, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[73216, 2028, 173, 3, 32, "Input"],
-Cell[73392, 2033, 126, 4, 78, "Output"]
-}, Open  ]],
-Cell[73533, 2040, 168, 3, 32, "Input"],
-Cell[CellGroupData[{
-Cell[73726, 2047, 359, 10, 34, "Input"],
-Cell[74088, 2059, 72, 1, 32, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[74197, 2065, 620, 15, 34, "Input"],
-Cell[74820, 2082, 117, 2, 49, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[74974, 2089, 231, 4, 32, "Input"],
-Cell[75208, 2095, 130, 4, 59, "Output"]
+Cell[39996, 1024, 422, 11, 32, "Input"],
+Cell[40421, 1037, 134, 2, 32, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[75399, 2106, 352, 11, 70, "Subsection"],
-Cell[75754, 2119, 125, 2, 35, "Subsubsection"],
+Cell[40616, 1046, 211, 8, 45, "Subsection"],
 Cell[CellGroupData[{
-Cell[75904, 2125, 171, 2, 29, "Subsubsection"],
-Cell[76078, 2129, 171, 3, 32, "Input"],
-Cell[76252, 2134, 739, 12, 34, "Input"],
-Cell[CellGroupData[{
-Cell[77016, 2150, 571, 14, 34, "Input"],
-Cell[77590, 2166, 116, 1, 32, "Output"]
+Cell[40852, 1058, 125, 2, 35, "Subsubsection"],
+Cell[40980, 1062, 673, 12, 99, "Text"],
+Cell[41656, 1076, 2157, 59, 49, "DisplayFormula"]
 }, Open  ]],
-Cell[77721, 2170, 156, 3, 32, "Input"],
-Cell[77880, 2175, 280, 5, 34, "Input"],
 Cell[CellGroupData[{
-Cell[78185, 2184, 388, 9, 34, "Input"],
-Cell[78576, 2195, 93, 1, 32, "Output"]
+Cell[43850, 1140, 150, 2, 35, "Subsubsection"],
+Cell[44003, 1144, 5448, 118, 306, "Text"],
+Cell[49454, 1264, 351, 6, 55, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49842, 1275, 193, 3, 35, "Subsubsection"],
+Cell[50038, 1280, 407, 7, 34, "Input"],
+Cell[CellGroupData[{
+Cell[50470, 1291, 499, 13, 56, "Input"],
+Cell[50972, 1306, 113, 1, 32, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51158, 1315, 155, 5, 65, "Section"],
+Cell[CellGroupData[{
+Cell[51338, 1324, 241, 9, 45, "Subsection"],
+Cell[CellGroupData[{
+Cell[51604, 1337, 125, 2, 35, "Subsubsection"],
+Cell[51732, 1341, 351, 6, 55, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52120, 1352, 294, 4, 35, "Subsubsection"],
+Cell[52417, 1358, 70, 1, 32, "Input"],
+Cell[52490, 1361, 1607, 44, 126, "Input"],
+Cell[54100, 1407, 1784, 47, 103, "Input"],
+Cell[55887, 1456, 2595, 74, 241, "Input"],
+Cell[CellGroupData[{
+Cell[58507, 1534, 607, 18, 34, "Input"],
+Cell[59117, 1554, 177, 3, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59331, 1562, 120, 2, 32, "Input"],
+Cell[59454, 1566, 90, 1, 32, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[78730, 2203, 296, 10, 45, "Subsection"],
+Cell[59605, 1574, 245, 9, 45, "Subsection"],
 Cell[CellGroupData[{
-Cell[79051, 2217, 125, 2, 35, "Subsubsection"],
-Cell[79179, 2221, 92, 1, 32, "Input"]
+Cell[59875, 1587, 125, 2, 35, "Subsubsection"],
+Cell[60003, 1591, 267, 5, 33, "Text"],
+Cell[60273, 1598, 368, 8, 27, "DisplayFormula"],
+Cell[60644, 1608, 285, 3, 33, "Text"],
+Cell[60932, 1613, 188, 4, 33, "Text"],
+Cell[61123, 1619, 388, 9, 27, "DisplayFormula"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61548, 1633, 197, 3, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[61770, 1640, 417, 10, 32, "Input"],
+Cell[62190, 1652, 276, 4, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62503, 1661, 196, 5, 32, "Input"],
+Cell[62702, 1668, 113, 1, 32, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62888, 1677, 148, 5, 65, "Section"],
+Cell[CellGroupData[{
+Cell[63061, 1686, 365, 11, 71, "Subsection"],
+Cell[CellGroupData[{
+Cell[63451, 1701, 125, 2, 35, "Subsubsection"],
+Cell[63579, 1705, 322, 6, 33, "Text"],
+Cell[63904, 1713, 460, 13, 47, "DisplayFormula"],
+Cell[64367, 1728, 361, 5, 33, "Text"],
+Cell[64731, 1735, 457, 14, 60, "DisplayFormula"],
+Cell[65191, 1751, 428, 5, 33, "Text"],
+Cell[65622, 1758, 329, 12, 39, "DisplayFormula"],
+Cell[65954, 1772, 379, 5, 33, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[66370, 1782, 171, 2, 35, "Subsubsection"],
+Cell[66544, 1786, 70, 1, 32, "Input"],
+Cell[66617, 1789, 1607, 44, 126, "Input"],
+Cell[68227, 1835, 1784, 47, 103, "Input"],
+Cell[70014, 1884, 2595, 74, 241, "Input"],
+Cell[72612, 1960, 186, 4, 32, "Input"],
+Cell[CellGroupData[{
+Cell[72823, 1968, 398, 10, 34, "Input"],
+Cell[73224, 1980, 91, 2, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73352, 1987, 476, 13, 34, "Input"],
+Cell[73831, 2002, 117, 2, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73985, 2009, 173, 3, 32, "Input"],
+Cell[74161, 2014, 126, 4, 78, "Output"]
+}, Open  ]],
+Cell[74302, 2021, 168, 3, 32, "Input"],
+Cell[CellGroupData[{
+Cell[74495, 2028, 359, 10, 34, "Input"],
+Cell[74857, 2040, 72, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[74966, 2046, 620, 15, 34, "Input"],
+Cell[75589, 2063, 117, 2, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75743, 2070, 231, 4, 32, "Input"],
+Cell[75977, 2076, 130, 4, 59, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[76168, 2087, 352, 11, 70, "Subsection"],
+Cell[76523, 2100, 125, 2, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[76673, 2106, 171, 2, 29, "Subsubsection"],
+Cell[76847, 2110, 171, 3, 32, "Input"],
+Cell[77021, 2115, 739, 12, 34, "Input"],
+Cell[CellGroupData[{
+Cell[77785, 2131, 571, 14, 34, "Input"],
+Cell[78359, 2147, 116, 1, 32, "Output"]
+}, Open  ]],
+Cell[78490, 2151, 156, 3, 32, "Input"],
+Cell[78649, 2156, 280, 5, 34, "Input"],
+Cell[CellGroupData[{
+Cell[78954, 2165, 388, 9, 34, "Input"],
+Cell[79345, 2176, 93, 1, 32, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
