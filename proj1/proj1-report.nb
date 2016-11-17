@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     88025,       2468]
-NotebookOptionsPosition[     79502,       2184]
-NotebookOutlinePosition[     79841,       2199]
-CellTagsIndexPosition[     79798,       2196]
+NotebookDataLength[     89810,       2527]
+NotebookOptionsPosition[     81049,       2236]
+NotebookOutlinePosition[     81388,       2251]
+CellTagsIndexPosition[     81345,       2248]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2098,9 +2098,61 @@ distribution"
   3.6883445611314297`*^9, 3.688344568635379*^9}, {3.6883452964589443`*^9, 
   3.688345297934979*^9}}],
 
+Cell[CellGroupData[{
+
 Cell["Solution", "Subsubsection",
  CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
    3.688339206676055*^9}],
+
+Cell["The normal distribution can be calculated as follows: ", "Text",
+ CellChangeTimes->{{3.688349169967903*^9, 3.688349184559881*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[CurlyPhi]", 
+   RowBox[{"(", "t", ")"}]}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "/", 
+     SqrtBox[
+      RowBox[{"2", "\[Pi]"}]]}], ")"}], 
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox["t", "2"]}], "/", "2"}], ")"}]]}]}]], "DisplayFormula",
+ InitializationCell->True,
+ CellChangeTimes->{{3.6883492970826397`*^9, 3.68834929991109*^9}, 
+   3.688349350936631*^9, {3.688349399681903*^9, 3.6883495669493027`*^9}},
+ FormatType->"InputForm",
+ FontWeight->"Bold"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{"pdf", 
+    RowBox[{"(", "t", ")"}]}], "=", 
+   RowBox[{
+    RowBox[{
+     StyleBox["(",
+      FontWeight->"Bold"], 
+     RowBox[{
+      StyleBox["1",
+       FontWeight->"Bold"], 
+      StyleBox["/",
+       FontWeight->"Bold"], "\[Sigma]"}], ")"}], "\[Times]", "\[CurlyPhi]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"t", "-", "\[Mu]"}], ")"}], "/", "\[Sigma]"}], ")"}]}]}],
+  FontWeight->"Bold"]], "DisplayFormula",
+ CellChangeTimes->{{3.688349189190884*^9, 3.688349191728104*^9}, {
+  3.688349254061154*^9, 3.6883492918952227`*^9}, {3.6883495751327753`*^9, 
+  3.688349653108553*^9}}],
+
+Cell["But we used the Mathematica implementation", "Text",
+ CellChangeTimes->{{3.68834972434482*^9, 3.688349734795684*^9}}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -2451,20 +2503,27 @@ Cell[75977, 2076, 130, 4, 59, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[76168, 2087, 352, 11, 70, "Subsection"],
-Cell[76523, 2100, 125, 2, 35, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[76673, 2106, 171, 2, 29, "Subsubsection"],
-Cell[76847, 2110, 171, 3, 32, "Input"],
-Cell[77021, 2115, 739, 12, 34, "Input"],
-Cell[CellGroupData[{
-Cell[77785, 2131, 571, 14, 34, "Input"],
-Cell[78359, 2147, 116, 1, 32, "Output"]
+Cell[76545, 2102, 125, 2, 35, "Subsubsection"],
+Cell[76673, 2106, 136, 1, 33, "Text"],
+Cell[76812, 2109, 584, 18, 39, "DisplayFormula",
+ InitializationCell->True],
+Cell[77399, 2129, 658, 21, 26, "DisplayFormula"],
+Cell[78060, 2152, 123, 1, 33, "Text"]
 }, Open  ]],
-Cell[78490, 2151, 156, 3, 32, "Input"],
-Cell[78649, 2156, 280, 5, 34, "Input"],
 Cell[CellGroupData[{
-Cell[78954, 2165, 388, 9, 34, "Input"],
-Cell[79345, 2176, 93, 1, 32, "Output"]
+Cell[78220, 2158, 171, 2, 35, "Subsubsection"],
+Cell[78394, 2162, 171, 3, 32, "Input"],
+Cell[78568, 2167, 739, 12, 34, "Input"],
+Cell[CellGroupData[{
+Cell[79332, 2183, 571, 14, 34, "Input"],
+Cell[79906, 2199, 116, 1, 32, "Output"]
+}, Open  ]],
+Cell[80037, 2203, 156, 3, 32, "Input"],
+Cell[80196, 2208, 280, 5, 34, "Input"],
+Cell[CellGroupData[{
+Cell[80501, 2217, 388, 9, 34, "Input"],
+Cell[80892, 2228, 93, 1, 32, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
