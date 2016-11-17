@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    210215,       6114]
-NotebookOptionsPosition[    201202,       5819]
-NotebookOutlinePosition[    201541,       5834]
-CellTagsIndexPosition[    201498,       5831]
+NotebookDataLength[     92246,       2570]
+NotebookOptionsPosition[     83469,       2279]
+NotebookOutlinePosition[     83816,       2294]
+CellTagsIndexPosition[     83773,       2291]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -317,21 +317,49 @@ Cell["Result", "Subsubsection",
 
 Cell[CellGroupData[{
 
-Cell["", "ItemNumbered",
+Cell[TextData[{
+ "For Teddy the expectation value is: ",
+ Cell[BoxData[
+  FractionBox["55", "2"]], "Output",
+  CellChangeTimes->{3.68833382103368*^9, 3.688334269096076*^9, 
+   3.688334988690286*^9, 3.6883353110564337`*^9, 3.688335980098874*^9}],
+ ". And the standard deviation is: ",
+ Cell[BoxData[
+  FractionBox[
+   SqrtBox[
+    FractionBox["655", "3"]], "2"]],
+  CellChangeTimes->{3.688332820378083*^9, 3.6883337561554003`*^9, 
+   3.688334269140602*^9, 3.688334988727883*^9, 3.6883353110949554`*^9, 
+   3.688335980225589*^9}],
+ "\[LineSeparator]For Car the expectation value is: 276. And the standard \
+deviation is: ",
+ Cell[BoxData[
+  RowBox[{"5", " ", 
+   SqrtBox[
+    FractionBox["131", "6"]]}]],
+  CellChangeTimes->{3.688334058827293*^9, 3.688334114302537*^9, 
+   3.6883342692046385`*^9, 3.688334988779912*^9, 3.6883353111715*^9, 
+   3.688335980432439*^9}]
+}], "ItemNumbered",
  CellChangeTimes->{{3.6883372866152573`*^9, 3.6883373082879457`*^9}, {
    3.688337527086372*^9, 3.688337528400094*^9}, {3.688337570365749*^9, 
    3.6883375705581903`*^9}, 3.688337614917563*^9, 3.688337784340906*^9, {
    3.688343910383457*^9, 3.688343924527417*^9}, 3.688343975590931*^9, {
    3.688344268181191*^9, 3.6883442930291243`*^9}, {3.688344360084448*^9, 
    3.6883443640280743`*^9}, {3.688346137666086*^9, 3.688346148026119*^9}, {
-   3.688346221009582*^9, 3.688346222409636*^9}, 3.688348861433303*^9}],
+   3.688346221009582*^9, 3.688346222409636*^9}, 3.688348861433303*^9, {
+   3.688350410934084*^9, 3.6883505248169613`*^9}}],
 
-Cell["", "ItemNumbered",
+Cell["\<\
+The probability for Teddy prize is: 0.015528.\[LineSeparator]The probability \
+for Car prize is: 0.00132646.\
+\>", "ItemNumbered",
  CellChangeTimes->{{3.6883372866152573`*^9, 3.6883373082879457`*^9}, {
    3.688337527086372*^9, 3.68833754800737*^9}, 3.6883439423163548`*^9, {
    3.688344007633802*^9, 3.688344038496764*^9}, {3.6883442798615847`*^9, 
    3.688344290437138*^9}, {3.688344411141013*^9, 3.688344418509015*^9}, {
-   3.688346208185595*^9, 3.6883462183857803`*^9}, 3.688348862878042*^9}]
+   3.688346208185595*^9, 3.6883462183857803`*^9}, 3.688348862878042*^9, {
+   3.688350541026886*^9, 3.6883505860579042`*^9}}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -738,8 +766,7 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{"DiscreteUniformDistribution", "[", 
      RowBox[{"{", 
-      RowBox[{"1", ",", " ", "12"}], "}"}], "]"}], ",", "x"}], 
-   "]"}]}], "\n", 
+      RowBox[{"1", ",", " ", "12"}], "}"}], "]"}], ",", "x"}], "]"}]}], "\n", 
  RowBox[{
   RowBox[{"die5", "[", "x_", "]"}], " ", ":=", 
   RowBox[{"PDF", "[", 
@@ -787,14 +814,15 @@ Cell[BoxData[{
      "]"}]}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{
-   RowBox[{"pfResult", "[", "s_", "]"}], "=", " ", 
    RowBox[{
-    RowBox[{"pfResult", "[", "s", "]"}], "=", 
-    RowBox[{"DiscreteConvolve", "[", 
-     RowBox[{
-      RowBox[{"pf3", "[", "y", "]"}], ",", " ", 
-      RowBox[{"die5", "[", "y", "]"}], ",", " ", "y", ",", " ", "s"}], 
-     "]"}]}]}], " ", ";", 
+    RowBox[{"pfResult", "[", "s_", "]"}], "=", " ", 
+    RowBox[{
+     RowBox[{"pfResult", "[", "s", "]"}], "=", 
+     RowBox[{"DiscreteConvolve", "[", 
+      RowBox[{
+       RowBox[{"pf3", "[", "y", "]"}], ",", " ", 
+       RowBox[{"die5", "[", "y", "]"}], ",", " ", "y", ",", " ", "s"}], 
+      "]"}]}]}], " ", ";"}], 
   RowBox[{"(*", " ", 
    RowBox[{"pfResult", " ", "is", " ", "our", " ", "function"}], " ", 
    "*)"}]}]}], "Input",
@@ -822,7 +850,7 @@ Cell[BoxData[
 Cell[BoxData["True"], "Output",
  CellChangeTimes->{{3.6883431207177277`*^9, 3.6883431262064247`*^9}, 
    3.6883432081271467`*^9, 3.688345191362651*^9, 3.688350225043131*^9, 
-   3.688350260619454*^9}]
+   3.688350260619454*^9, 3.6883505969972334`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -838,7 +866,7 @@ Cell[BoxData[
    3.688342842624405*^9}, 3.688342912890687*^9, 3.688342966578055*^9, {
    3.688343021804308*^9, 3.6883430280213346`*^9}, {3.688343065066368*^9, 
    3.68834306954606*^9}, 3.6883432100916224`*^9, 3.688345191387446*^9, 
-   3.688350225082796*^9, 3.688350260659122*^9}]
+   3.688350225082796*^9, 3.688350260659122*^9, 3.688350597018746*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -850,7 +878,8 @@ Cell[BoxData[
 Cell[BoxData[
  FractionBox["1", "46080"]], "Output",
  CellChangeTimes->{3.6883430808648376`*^9, 3.688343212556669*^9, 
-  3.6883451914186897`*^9, 3.688350225125836*^9, 3.688350260696381*^9}]
+  3.6883451914186897`*^9, 3.688350225125836*^9, 3.688350260696381*^9, 
+  3.6883505970462623`*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -953,7 +982,8 @@ Cell[BoxData[
 Cell[BoxData[
  FractionBox["41", "3840"]], "Output",
  CellChangeTimes->{3.688343263844678*^9, 3.6883434017311277`*^9, 
-  3.688345191487316*^9, 3.688350225166717*^9, 3.688350260735228*^9}]
+  3.688345191487316*^9, 3.688350225166717*^9, 3.688350260735228*^9, 
+  3.688350597067775*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -1039,7 +1069,8 @@ Cell[BoxData[
 
 Cell[BoxData["187.3170731707317`"], "Output",
  CellChangeTimes->{{3.68834358022593*^9, 3.68834358787997*^9}, 
-   3.68834519158263*^9, 3.688350225206444*^9, 3.6883502607781363`*^9}]
+   3.68834519158263*^9, 3.688350225206444*^9, 3.6883502607781363`*^9, 
+   3.6883505970992928`*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -1308,7 +1339,7 @@ Cell[BoxData[
 
 Cell[BoxData["0.19320837049113518`"], "Output",
  CellChangeTimes->{3.688343794147523*^9, 3.6883451916752043`*^9, 
-  3.68835022525003*^9, 3.688350260827104*^9}]
+  3.68835022525003*^9, 3.688350260827104*^9, 3.6883505971503944`*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -1392,8 +1423,7 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{"DiscreteUniformDistribution", "[", 
      RowBox[{"{", 
-      RowBox[{"1", ",", " ", "12"}], "}"}], "]"}], ",", "x"}], 
-   "]"}]}], "\n", 
+      RowBox[{"1", ",", " ", "12"}], "}"}], "]"}], ",", "x"}], "]"}]}], "\n", 
  RowBox[{
   RowBox[{"die5", "[", "x_", "]"}], " ", ":=", 
   RowBox[{"PDF", "[", 
@@ -1528,8 +1558,7 @@ Cell[BoxData[{
     RowBox[{"ct9", ",", " ", "ct", ",", " ", 
      RowBox[{"{", 
       RowBox[{"1", ",", " ", 
-       RowBox[{"-", "1"}]}], "}"}], ",", " ", "0"}], "]"}]}], ";"}]}], "Input",\
-
+       RowBox[{"-", "1"}]}], "}"}], ",", " ", "0"}], "]"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.688345783228924*^9, 3.688345824076172*^9}, {
   3.688346020515204*^9, 3.6883460594220877`*^9}}],
 
@@ -1557,902 +1586,10 @@ Cell[BoxData[
    3.688350275665619*^9, 3.6883502768643303`*^9}}],
 
 Cell[BoxData[
- TemplateBox[{
-  "Part","partd",
-   "\"Part specification \\!\\(\\*RowBox[{\\\"KonvTable10\\\", \\\"\
-\[LeftDoubleBracket]\\\", \\\"51\\\", \\\"\[RightDoubleBracket]\\\"}]\\) is \
-longer than depth of object.\"",2,281,14,15799572407206303312,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6883502276639557`*^9, 3.688350263363183*^9}],
-
-Cell[BoxData[
- TemplateBox[{
-  "Part","partd",
-   "\"Part specification \\!\\(\\*RowBox[{\\\"KonvTable10\\\", \\\"\
-\[LeftDoubleBracket]\\\", \\\"52\\\", \\\"\[RightDoubleBracket]\\\"}]\\) is \
-longer than depth of object.\"",2,281,15,15799572407206303312,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6883502276639557`*^9, 3.688350263372335*^9}],
-
-Cell[BoxData[
- TemplateBox[{
-  "Part","partd",
-   "\"Part specification \\!\\(\\*RowBox[{\\\"KonvTable10\\\", \\\"\
-\[LeftDoubleBracket]\\\", \\\"53\\\", \\\"\[RightDoubleBracket]\\\"}]\\) is \
-longer than depth of object.\"",2,281,16,15799572407206303312,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6883502276639557`*^9, 3.6883502633791027`*^9}],
-
-Cell[BoxData[
- TemplateBox[{
-  "General","stop",
-   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Part\\\", \\\"::\\\", \
-\\\"partd\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
-calculation.\"",2,281,17,15799572407206303312,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6883502276639557`*^9, 3.688350263385912*^9}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "51", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "52", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "53", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "54", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "55", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "56", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "57", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "58", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "59", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "60", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "61", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "62", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "63", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "64", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "65", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "66", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "67", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "68", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "69", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "70", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "71", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "72", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "73", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "74", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "75", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "76", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "77", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "78", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "79", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "80", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "81", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "82", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "83", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "84", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "85", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "86", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "87", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "88", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "89", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "90", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "91", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "92", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "93", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "94", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "95", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "96", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "97", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "98", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "99", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "100", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "101", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "102", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "103", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "104", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "105", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "106", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "107", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "108", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "109", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "110", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "111", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "112", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "113", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "114", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "115", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "116", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "117", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "118", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "119", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "120", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "121", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "122", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "123", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "124", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "125", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "126", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "127", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "128", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "129", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "130", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "131", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "132", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "133", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "134", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "135", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "136", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "137", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "138", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "139", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "140", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "141", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "142", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "143", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "144", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "145", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "146", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "147", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "148", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "149", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "150", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "151", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "152", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "153", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "154", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "155", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "156", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "157", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "158", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "159", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "160", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "161", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "162", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "163", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "164", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "165", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "166", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "167", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "168", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "169", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "170", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "171", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "172", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "173", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "174", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "175", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "176", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "177", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "178", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "179", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "180", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "181", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "182", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "183", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "184", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "185", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "186", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "187", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "188", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "189", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "190", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "191", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "192", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "193", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "194", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "195", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "196", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "197", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "198", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "199", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "200", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "201", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "351", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "352", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "353", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "354", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "355", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "356", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "357", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "358", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "359", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "360", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "361", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "362", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "363", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "364", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "365", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "366", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "367", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "368", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "369", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "370", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "371", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "372", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "373", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "374", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "375", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "376", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "377", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "378", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "379", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "380", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "381", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "382", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "383", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "384", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "385", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "386", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "387", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "388", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "389", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "390", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "391", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "392", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "393", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "394", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "395", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "396", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "397", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "398", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "399", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "400", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "401", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "402", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "403", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "404", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "405", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "406", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "407", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "408", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "409", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "410", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "411", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "412", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "413", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "414", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "415", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "416", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "417", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "418", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "419", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "420", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "421", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "422", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "423", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "424", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "425", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "426", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "427", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "428", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "429", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "430", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "431", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "432", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "433", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "434", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "435", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "436", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "437", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "438", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "439", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "440", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "441", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "442", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "443", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "444", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "445", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "446", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "447", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "448", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "449", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "450", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "451", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "452", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "453", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "454", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "455", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "456", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "457", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "458", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "459", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "460", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "461", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "462", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "463", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "464", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "465", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "466", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "467", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "468", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "469", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "470", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "471", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "472", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "473", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "474", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "475", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "476", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "477", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "478", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "479", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "480", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "481", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "482", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "483", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "484", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "485", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "486", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "487", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "488", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "489", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "490", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "491", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "492", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "493", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "494", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "495", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "496", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "497", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "498", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "499", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "500", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "501", 
-   "\[RightDoubleBracket]"}]}]], "Output",
+ FractionBox["850900891349950659211944876745258211767259", 
+  "719405003058931854978559698800738304000000000"]], "Output",
  CellChangeTimes->{3.68834608047473*^9, 3.688350227697942*^9, 
-  3.688350263394629*^9}]
+  3.688350263394629*^9, 3.6883506000478163`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2461,867 +1598,9 @@ Cell[BoxData[
  RowBox[{"N", "[", "p", "]"}]], "Input",
  CellChangeTimes->{{3.688346114547961*^9, 3.688346117314115*^9}}],
 
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "51", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "52", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "53", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "54", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "55", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "56", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "57", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "58", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "59", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "60", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "61", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "62", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "63", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "64", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "65", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "66", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "67", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "68", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "69", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "70", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "71", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "72", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "73", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "74", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "75", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "76", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "77", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "78", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "79", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "80", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "81", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "82", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "83", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "84", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "85", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "86", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "87", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "88", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "89", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "90", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "91", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "92", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "93", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "94", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "95", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "96", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "97", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "98", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "99", "\[RightDoubleBracket]"}], "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "100", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "101", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "102", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "103", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "104", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "105", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "106", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "107", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "108", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "109", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "110", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "111", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "112", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "113", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "114", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "115", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "116", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "117", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "118", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "119", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "120", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "121", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "122", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "123", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "124", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "125", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "126", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "127", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "128", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "129", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "130", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "131", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "132", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "133", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "134", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "135", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "136", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "137", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "138", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "139", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "140", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "141", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "142", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "143", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "144", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "145", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "146", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "147", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "148", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "149", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "150", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "151", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "152", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "153", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "154", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "155", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "156", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "157", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "158", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "159", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "160", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "161", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "162", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "163", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "164", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "165", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "166", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "167", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "168", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "169", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "170", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "171", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "172", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "173", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "174", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "175", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "176", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "177", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "178", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "179", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "180", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "181", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "182", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "183", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "184", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "185", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "186", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "187", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "188", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "189", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "190", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "191", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "192", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "193", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "194", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "195", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "196", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "197", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "198", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "199", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "200", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "201", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "351", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "352", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "353", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "354", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "355", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "356", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "357", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "358", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "359", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "360", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "361", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "362", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "363", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "364", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "365", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "366", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "367", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "368", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "369", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "370", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "371", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "372", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "373", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "374", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "375", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "376", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "377", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "378", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "379", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "380", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "381", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "382", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "383", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "384", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "385", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "386", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "387", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "388", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "389", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "390", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "391", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "392", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "393", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "394", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "395", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "396", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "397", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "398", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "399", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "400", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "401", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "402", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "403", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "404", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "405", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "406", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "407", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "408", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "409", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "410", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "411", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "412", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "413", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "414", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "415", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "416", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "417", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "418", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "419", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "420", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "421", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "422", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "423", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "424", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "425", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "426", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "427", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "428", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "429", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "430", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "431", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "432", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "433", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "434", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "435", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "436", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "437", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "438", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "439", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "440", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "441", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "442", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "443", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "444", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "445", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "446", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "447", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "448", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "449", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "450", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "451", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "452", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "453", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "454", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "455", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "456", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "457", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "458", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "459", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "460", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "461", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "462", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "463", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "464", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "465", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "466", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "467", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "468", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "469", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "470", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "471", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "472", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "473", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "474", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "475", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "476", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "477", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "478", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "479", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "480", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "481", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "482", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "483", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "484", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "485", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "486", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "487", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "488", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "489", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "490", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "491", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "492", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "493", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "494", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "495", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "496", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "497", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "498", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "499", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "500", "\[RightDoubleBracket]"}], 
-  "+", 
-  RowBox[{
-  "KonvTable10", "\[LeftDoubleBracket]", "501", 
-   "\[RightDoubleBracket]"}]}]], "Output",
+Cell[BoxData["0.0011827842282607075`"], "Output",
  CellChangeTimes->{3.68834611816877*^9, 3.6883502277410803`*^9, 
-  3.688350263426621*^9}]
+  3.688350263426621*^9, 3.688350600077834*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -3407,918 +1686,11 @@ Cell[BoxData[
    3.688346169546228*^9, 3.688346172265992*^9}}],
 
 Cell[BoxData[
- RowBox[{"250", "/", 
-  RowBox[{"(", 
-   RowBox[{
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "51", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "52", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "53", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "54", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "55", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "56", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "57", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "58", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "59", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "60", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "61", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "62", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "63", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "64", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "65", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "66", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "67", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "68", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "69", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "70", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "71", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "72", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "73", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "74", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "75", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "76", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "77", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "78", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "79", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "80", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "81", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "82", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "83", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "84", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "85", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "86", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "87", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "88", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "89", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "90", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "91", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "92", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "93", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "94", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "95", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "96", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "97", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "98", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "99", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "100", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "101", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "102", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "103", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "104", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "105", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "106", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "107", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "108", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "109", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "110", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "111", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "112", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "113", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "114", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "115", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "116", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "117", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "118", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "119", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "120", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "121", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "122", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "123", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "124", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "125", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "126", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "127", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "128", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "129", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "130", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "131", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "132", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "133", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "134", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "135", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "136", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "137", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "138", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "139", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "140", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "141", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "142", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "143", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "144", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "145", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "146", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "147", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "148", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "149", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "150", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "151", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "152", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "153", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "154", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "155", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "156", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "157", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "158", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "159", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "160", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "161", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "162", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "163", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "164", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "165", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "166", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "167", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "168", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "169", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "170", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "171", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "172", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "173", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "174", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "175", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "176", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "177", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "178", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "179", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "180", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "181", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "182", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "183", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "184", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "185", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "186", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "187", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "188", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "189", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "190", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "191", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "192", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "193", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "194", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "195", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "196", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "197", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "198", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "199", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "200", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "201", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "351", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "352", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "353", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "354", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "355", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "356", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "357", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "358", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "359", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "360", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "361", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "362", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "363", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "364", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "365", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "366", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "367", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "368", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "369", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "370", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "371", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "372", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "373", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "374", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "375", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "376", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "377", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "378", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "379", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "380", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "381", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "382", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "383", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "384", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "385", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "386", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "387", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "388", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "389", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "390", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "391", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "392", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "393", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "394", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "395", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "396", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "397", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "398", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "399", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "400", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "401", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "402", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "403", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "404", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "405", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "406", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "407", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "408", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "409", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "410", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "411", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "412", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "413", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "414", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "415", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "416", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "417", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "418", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "419", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "420", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "421", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "422", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "423", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "424", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "425", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "426", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "427", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "428", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "429", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "430", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "431", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "432", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "433", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "434", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "435", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "436", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "437", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "438", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "439", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "440", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "441", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "442", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "443", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "444", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "445", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "446", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "447", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "448", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "449", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "450", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "451", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "452", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "453", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "454", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "455", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "456", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "457", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "458", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "459", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "460", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "461", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "462", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "463", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "464", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "465", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "466", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "467", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "468", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "469", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "470", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "471", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "472", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "473", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "474", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "475", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "476", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "477", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "478", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "479", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "480", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "481", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "482", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "483", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "484", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "485", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "486", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "487", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "488", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "489", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "490", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "491", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "492", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "493", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "494", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "495", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "496", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "497", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "498", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "499", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "500", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "501", "\[RightDoubleBracket]"}]}],
-    ")"}]}]], "Output",
+ FractionBox["179851250764732963744639924700184576000000000000", 
+  "850900891349950659211944876745258211767259"]], "Output",
  CellChangeTimes->{{3.688344929037739*^9, 3.688344950236381*^9}, 
    3.68834519444846*^9, {3.688346165578803*^9, 3.688346172500786*^9}, 
-   3.688350227787621*^9, 3.688350263457609*^9}]
+   3.688350227787621*^9, 3.688350263457609*^9, 3.6883506001118526`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4330,918 +1702,9 @@ Cell[BoxData[
     RowBox[{"1", "/", "p"}], ")"}], "*", "250"}], "]"}]], "Input",
  CellChangeTimes->{{3.6883461815390177`*^9, 3.688346198441635*^9}}],
 
-Cell[BoxData[
- RowBox[{"250.`", "/", 
-  RowBox[{"(", 
-   RowBox[{
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "51", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "52", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "53", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "54", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "55", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "56", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "57", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "58", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "59", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "60", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "61", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "62", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "63", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "64", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "65", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "66", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "67", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "68", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "69", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "70", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "71", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "72", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "73", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "74", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "75", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "76", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "77", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "78", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "79", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "80", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "81", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "82", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "83", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "84", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "85", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "86", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "87", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "88", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "89", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "90", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "91", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "92", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "93", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "94", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "95", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "96", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "97", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "98", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "99", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "100", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "101", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "102", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "103", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "104", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "105", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "106", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "107", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "108", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "109", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "110", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "111", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "112", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "113", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "114", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "115", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "116", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "117", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "118", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "119", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "120", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "121", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "122", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "123", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "124", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "125", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "126", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "127", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "128", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "129", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "130", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "131", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "132", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "133", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "134", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "135", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "136", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "137", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "138", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "139", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "140", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "141", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "142", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "143", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "144", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "145", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "146", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "147", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "148", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "149", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "150", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "151", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "152", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "153", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "154", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "155", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "156", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "157", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "158", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "159", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "160", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "161", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "162", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "163", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "164", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "165", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "166", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "167", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "168", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "169", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "170", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "171", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "172", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "173", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "174", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "175", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "176", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "177", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "178", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "179", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "180", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "181", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "182", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "183", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "184", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "185", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "186", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "187", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "188", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "189", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "190", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "191", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "192", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "193", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "194", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "195", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "196", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "197", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "198", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "199", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "200", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "201", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "351", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "352", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "353", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "354", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "355", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "356", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "357", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "358", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "359", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "360", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "361", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "362", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "363", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "364", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "365", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "366", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "367", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "368", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "369", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "370", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "371", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "372", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "373", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "374", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "375", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "376", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "377", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "378", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "379", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "380", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "381", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "382", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "383", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "384", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "385", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "386", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "387", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "388", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "389", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "390", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "391", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "392", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "393", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "394", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "395", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "396", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "397", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "398", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "399", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "400", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "401", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "402", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "403", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "404", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "405", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "406", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "407", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "408", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "409", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "410", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "411", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "412", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "413", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "414", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "415", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "416", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "417", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "418", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "419", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "420", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "421", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "422", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "423", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "424", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "425", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "426", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "427", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "428", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "429", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "430", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "431", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "432", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "433", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "434", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "435", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "436", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "437", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "438", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "439", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "440", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "441", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "442", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "443", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "444", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "445", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "446", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "447", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "448", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "449", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "450", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "451", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "452", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "453", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "454", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "455", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "456", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "457", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "458", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "459", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "460", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "461", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "462", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "463", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "464", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "465", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "466", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "467", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "468", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "469", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "470", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "471", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "472", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "473", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "474", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "475", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "476", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "477", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "478", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "479", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "480", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "481", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "482", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "483", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "484", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "485", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "486", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "487", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "488", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "489", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "490", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "491", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "492", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "493", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "494", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "495", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "496", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "497", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "498", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "499", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "500", "\[RightDoubleBracket]"}], 
-    "+", 
-    RowBox[{
-    "KonvTable10", "\[LeftDoubleBracket]", "501", "\[RightDoubleBracket]"}]}],
-    ")"}]}]], "Output",
+Cell[BoxData["211365.6861722165`"], "Output",
  CellChangeTimes->{{3.688346193381638*^9, 3.6883461993723516`*^9}, 
-   3.688350227835794*^9, 3.688350263535499*^9}]
+   3.688350227835794*^9, 3.688350263535499*^9, 3.688350600145873*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -5391,8 +1854,7 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{"DiscreteUniformDistribution", "[", 
      RowBox[{"{", 
-      RowBox[{"1", ",", " ", "12"}], "}"}], "]"}], ",", "x"}], 
-   "]"}]}], "\n", 
+      RowBox[{"1", ",", " ", "12"}], "}"}], "]"}], ",", "x"}], "]"}]}], "\n", 
  RowBox[{
   RowBox[{"die5", "[", "x_", "]"}], " ", ":=", 
   RowBox[{"PDF", "[", 
@@ -5527,8 +1989,7 @@ Cell[BoxData[{
     RowBox[{"ct9", ",", " ", "ct", ",", " ", 
      RowBox[{"{", 
       RowBox[{"1", ",", " ", 
-       RowBox[{"-", "1"}]}], "}"}], ",", " ", "0"}], "]"}]}], ";"}]}], "Input",\
-
+       RowBox[{"-", "1"}]}], "}"}], ",", " ", "0"}], "]"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.688345783228924*^9, 3.688345824076172*^9}, {
   3.688346020515204*^9, 3.6883460594220877`*^9}}],
 
@@ -5555,7 +2016,7 @@ Cell[BoxData[
 Cell[BoxData[
  FractionBox["55", "2"]], "Output",
  CellChangeTimes->{3.688346542516509*^9, 3.688350230299706*^9, 
-  3.688350266614458*^9}]
+  3.688350266614458*^9, 3.688350603028909*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5570,7 +2031,6 @@ Cell[BoxData[
       RowBox[{"pf4", "[", "k", "]"}]}], ",", " ", 
      RowBox[{"{", 
       RowBox[{"k", ",", " ", "5", ",", " ", "50"}], "}"}]}], "]"}], " ", "-", 
-   
    RowBox[{"\[Mu]1", "^", "2"}]}]}]], "Input",
  CellChangeTimes->{{3.688346470086005*^9, 3.688346471463984*^9}, {
   3.688346514166647*^9, 3.688346566911621*^9}}],
@@ -5578,7 +2038,7 @@ Cell[BoxData[
 Cell[BoxData[
  FractionBox["655", "12"]], "Output",
  CellChangeTimes->{{3.688346540783263*^9, 3.688346567666876*^9}, 
-   3.688350230333187*^9, 3.6883502667543583`*^9}]
+   3.688350230333187*^9, 3.6883502667543583`*^9, 3.6883506030504217`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5593,7 +2053,7 @@ Cell[BoxData[
   SqrtBox[
    FractionBox["655", "3"]], "2"]], "Output",
  CellChangeTimes->{3.688346600844083*^9, 3.688350230340856*^9, 
-  3.688350266783544*^9}]
+  3.688350266783544*^9, 3.688350603079938*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -5617,7 +2077,7 @@ Cell[BoxData[
 
 Cell[BoxData["276"], "Output",
  CellChangeTimes->{3.688346634534137*^9, 3.688350230393691*^9, 
-  3.688350266817637*^9}]
+  3.688350266817637*^9, 3.688350603122463*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5643,7 +2103,7 @@ Cell[BoxData[
 Cell[BoxData[
  FractionBox["3275", "6"]], "Output",
  CellChangeTimes->{{3.688346657326038*^9, 3.688346663092072*^9}, 
-   3.688350230440423*^9, 3.688350266846122*^9}]
+   3.688350230440423*^9, 3.688350266846122*^9, 3.6883506031536655`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5659,7 +2119,7 @@ Cell[BoxData[
   SqrtBox[
    FractionBox["131", "6"]]}]], "Output",
  CellChangeTimes->{3.6883466876805897`*^9, 3.6883502304833527`*^9, 
-  3.6883502668525057`*^9}]
+  3.6883502668525057`*^9, 3.688350603182813*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -5780,7 +2240,7 @@ Cell[BoxData[
 
 Cell[BoxData["0.015527993780733468`"], "Output",
  CellChangeTimes->{{3.688346829447379*^9, 3.6883468540945377`*^9}, 
-   3.6883502306049767`*^9, 3.68835026694578*^9}]
+   3.6883502306049767`*^9, 3.68835026694578*^9, 3.688350603293377*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -5810,7 +2270,7 @@ Cell[BoxData[
 
 Cell[BoxData["0.0013264555946008076`"], "Output",
  CellChangeTimes->{3.6883469329460287`*^9, 3.688350230686413*^9, 
-  3.6883502670522003`*^9}]
+  3.6883502670522003`*^9, 3.6883506033704205`*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -5819,7 +2279,7 @@ Cell[BoxData["0.0013264555946008076`"], "Output",
 },
 WindowSize->{839, 995},
 WindowMargins->{{Automatic, 259}, {0, Automatic}},
-FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -5834,283 +2294,279 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 260, 4, 93, "Title"],
-Cell[843, 28, 101, 1, 51, "Subtitle"],
-Cell[947, 31, 361, 10, 30, "Text"],
+Cell[580, 22, 260, 4, 91, "Title"],
+Cell[843, 28, 101, 1, 49, "Subtitle"],
+Cell[947, 31, 361, 10, 27, "Text"],
 Cell[CellGroupData[{
-Cell[1333, 45, 242, 7, 65, "Section"],
-Cell[1578, 54, 285, 6, 55, "Text"],
+Cell[1333, 45, 242, 7, 63, "Section"],
+Cell[1578, 54, 285, 6, 49, "Text"],
 Cell[CellGroupData[{
-Cell[1888, 64, 218, 9, 45, "Subsection"],
+Cell[1888, 64, 218, 9, 43, "Subsection"],
 Cell[CellGroupData[{
-Cell[2131, 77, 176, 2, 35, "Subsubsection"],
-Cell[2310, 81, 550, 9, 99, "Text"],
+Cell[2131, 77, 176, 2, 34, "Subsubsection"],
+Cell[2310, 81, 550, 9, 87, "Text"],
 Cell[CellGroupData[{
-Cell[2885, 94, 292, 3, 33, "ItemNumbered"],
-Cell[3180, 99, 202, 3, 33, "ItemNumbered"],
-Cell[3385, 104, 217, 2, 33, "ItemNumbered"],
-Cell[3605, 108, 221, 4, 33, "ItemNumbered"]
+Cell[2885, 94, 292, 3, 30, "ItemNumbered"],
+Cell[3180, 99, 202, 3, 30, "ItemNumbered"],
+Cell[3385, 104, 217, 2, 30, "ItemNumbered"],
+Cell[3605, 108, 221, 4, 30, "ItemNumbered"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3875, 118, 169, 2, 35, "Subsubsection"],
+Cell[3875, 118, 169, 2, 34, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[4069, 124, 328, 4, 33, "ItemNumbered"],
-Cell[4400, 130, 443, 11, 39, "ItemNumbered"],
-Cell[4846, 143, 301, 4, 33, "ItemNumbered"],
-Cell[5150, 149, 221, 3, 33, "ItemNumbered"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[5432, 159, 190, 8, 45, "Subsection"],
-Cell[CellGroupData[{
-Cell[5647, 171, 176, 2, 35, "Subsubsection"],
-Cell[5826, 175, 698, 18, 77, "Text"],
-Cell[CellGroupData[{
-Cell[6549, 197, 415, 5, 33, "ItemNumbered"],
-Cell[6967, 204, 316, 4, 33, "ItemNumbered"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[7332, 214, 169, 2, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[7526, 220, 1008, 19, 39, "ItemNumbered"],
-Cell[8537, 241, 968, 19, 39, "ItemNumbered"]
+Cell[4069, 124, 328, 4, 30, "ItemNumbered"],
+Cell[4400, 130, 443, 11, 34, "ItemNumbered"],
+Cell[4846, 143, 301, 4, 30, "ItemNumbered"],
+Cell[5150, 149, 221, 3, 30, "ItemNumbered"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9566, 267, 189, 8, 45, "Subsection"],
+Cell[5432, 159, 190, 8, 43, "Subsection"],
 Cell[CellGroupData[{
-Cell[9780, 279, 176, 2, 35, "Subsubsection"],
-Cell[9959, 283, 267, 3, 33, "Text"],
+Cell[5647, 171, 176, 2, 34, "Subsubsection"],
+Cell[5826, 175, 698, 18, 68, "Text"],
 Cell[CellGroupData[{
-Cell[10251, 290, 507, 8, 53, "ItemNumbered"],
-Cell[10761, 300, 395, 7, 53, "ItemNumbered"]
+Cell[6549, 197, 415, 5, 30, "ItemNumbered"],
+Cell[6967, 204, 316, 4, 30, "ItemNumbered"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11205, 313, 169, 2, 35, "Subsubsection"],
+Cell[7332, 214, 169, 2, 34, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[11399, 319, 534, 7, 33, "ItemNumbered"],
-Cell[11936, 328, 389, 5, 33, "ItemNumbered"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[12398, 341, 169, 6, 65, "Section"],
-Cell[CellGroupData[{
-Cell[12592, 351, 198, 8, 45, "Subsection"],
-Cell[CellGroupData[{
-Cell[12815, 363, 125, 2, 35, "Subsubsection"],
-Cell[12943, 367, 790, 13, 77, "Text"],
-Cell[13736, 382, 2050, 55, 49, "DisplayFormula"],
-Cell[15789, 439, 301, 5, 55, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[16127, 449, 150, 2, 35, "Subsubsection"],
-Cell[16280, 453, 13079, 241, 249, "Output"],
-Cell[29362, 696, 124, 1, 33, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[29523, 702, 195, 3, 35, "Subsubsection"],
-Cell[29721, 707, 70, 1, 32, "Input"],
-Cell[29794, 710, 1607, 44, 126, "Input"],
-Cell[31404, 756, 1847, 49, 125, "Input"],
-Cell[CellGroupData[{
-Cell[33276, 809, 453, 10, 34, "Input"],
-Cell[33732, 821, 199, 3, 32, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[33968, 829, 129, 2, 32, "Input"],
-Cell[34100, 833, 461, 7, 49, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[34598, 845, 127, 2, 32, "Input"],
-Cell[34728, 849, 189, 3, 49, "Output"]
+Cell[7526, 220, 1008, 19, 34, "ItemNumbered"],
+Cell[8537, 241, 968, 19, 34, "ItemNumbered"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34978, 859, 194, 8, 45, "Subsection"],
+Cell[9566, 267, 189, 8, 43, "Subsection"],
 Cell[CellGroupData[{
-Cell[35197, 871, 125, 2, 35, "Subsubsection"],
-Cell[35325, 875, 690, 18, 99, "Text"],
-Cell[36018, 895, 752, 19, 63, "DisplayFormula"],
-Cell[36773, 916, 321, 6, 55, "Text"]
-}, Open  ]],
+Cell[9780, 279, 176, 2, 34, "Subsubsection"],
+Cell[9959, 283, 267, 3, 30, "Text"],
 Cell[CellGroupData[{
-Cell[37131, 927, 193, 3, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[37349, 934, 562, 16, 34, "Input"],
-Cell[37914, 952, 187, 3, 49, "Output"]
-}, Open  ]]
+Cell[10251, 290, 507, 8, 47, "ItemNumbered"],
+Cell[10761, 300, 395, 7, 30, "ItemNumbered"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38162, 962, 199, 8, 45, "Subsection"],
+Cell[11205, 313, 169, 2, 34, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[38386, 974, 125, 2, 35, "Subsubsection"],
-Cell[38514, 978, 503, 9, 77, "Text"],
-Cell[39020, 989, 320, 8, 27, "DisplayFormula"],
-Cell[39343, 999, 134, 1, 33, "Text"],
-Cell[39480, 1002, 189, 4, 33, "Text"],
-Cell[39672, 1008, 249, 6, 27, "DisplayFormula"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[39958, 1019, 197, 3, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[40180, 1026, 422, 11, 32, "Input"],
-Cell[40605, 1039, 180, 2, 32, "Output"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[40846, 1048, 211, 8, 45, "Subsection"],
-Cell[CellGroupData[{
-Cell[41082, 1060, 125, 2, 35, "Subsubsection"],
-Cell[41210, 1064, 673, 12, 99, "Text"],
-Cell[41886, 1078, 2157, 59, 49, "DisplayFormula"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[44080, 1142, 150, 2, 35, "Subsubsection"],
-Cell[44233, 1146, 5448, 118, 306, "Text"],
-Cell[49684, 1266, 351, 6, 55, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[50072, 1277, 193, 3, 35, "Subsubsection"],
-Cell[50268, 1282, 407, 7, 34, "Input"],
-Cell[CellGroupData[{
-Cell[50700, 1293, 499, 13, 56, "Input"],
-Cell[51202, 1308, 159, 2, 32, "Output"]
+Cell[11399, 319, 1445, 31, 87, "ItemNumbered"],
+Cell[12847, 352, 557, 9, 47, "ItemNumbered"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[51434, 1318, 155, 5, 65, "Section"],
+Cell[13477, 369, 169, 6, 63, "Section"],
 Cell[CellGroupData[{
-Cell[51614, 1327, 241, 9, 45, "Subsection"],
+Cell[13671, 379, 198, 8, 43, "Subsection"],
 Cell[CellGroupData[{
-Cell[51880, 1340, 125, 2, 35, "Subsubsection"],
-Cell[52008, 1344, 351, 6, 55, "Text"]
+Cell[13894, 391, 125, 2, 34, "Subsubsection"],
+Cell[14022, 395, 790, 13, 68, "Text"],
+Cell[14815, 410, 2050, 55, 44, "DisplayFormula"],
+Cell[16868, 467, 301, 5, 49, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[52396, 1355, 294, 4, 35, "Subsubsection"],
-Cell[52693, 1361, 70, 1, 32, "Input"],
-Cell[52766, 1364, 1607, 44, 126, "Input"],
-Cell[54376, 1410, 1784, 47, 103, "Input"],
-Cell[56163, 1459, 2595, 74, 241, "Input"],
-Cell[CellGroupData[{
-Cell[58783, 1537, 645, 19, 34, "Input"],
-Cell[59431, 1558, 372, 7, 23, "Message"],
-Cell[59806, 1567, 372, 7, 23, "Message"],
-Cell[60181, 1576, 374, 7, 23, "Message"],
-Cell[60558, 1585, 363, 7, 23, "Message"],
-Cell[60924, 1594, 28613, 860, 1683, "Output"]
+Cell[17206, 477, 150, 2, 34, "Subsubsection"],
+Cell[17359, 481, 13079, 241, 250, "Output"],
+Cell[30441, 724, 124, 1, 30, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[89574, 2459, 120, 2, 32, "Input"],
-Cell[89697, 2463, 28615, 860, 1683, "Output"]
+Cell[30602, 730, 195, 3, 34, "Subsubsection"],
+Cell[30800, 735, 70, 1, 30, "Input"],
+Cell[30873, 738, 1603, 43, 107, "Input"],
+Cell[32479, 783, 1869, 50, 107, "Input"],
+Cell[CellGroupData[{
+Cell[34373, 837, 453, 10, 30, "Input"],
+Cell[34829, 849, 223, 3, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35089, 857, 129, 2, 30, "Input"],
+Cell[35221, 861, 483, 7, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35741, 873, 127, 2, 30, "Input"],
+Cell[35871, 877, 216, 4, 43, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[118373, 3330, 245, 9, 45, "Subsection"],
+Cell[36148, 888, 194, 8, 43, "Subsection"],
 Cell[CellGroupData[{
-Cell[118643, 3343, 125, 2, 35, "Subsubsection"],
-Cell[118771, 3347, 267, 5, 33, "Text"],
-Cell[119041, 3354, 368, 8, 27, "DisplayFormula"],
-Cell[119412, 3364, 285, 3, 33, "Text"],
-Cell[119700, 3369, 188, 4, 33, "Text"],
-Cell[119891, 3375, 388, 9, 27, "DisplayFormula"]
+Cell[36367, 900, 125, 2, 34, "Subsubsection"],
+Cell[36495, 904, 690, 18, 68, "Text"],
+Cell[37188, 924, 752, 19, 57, "DisplayFormula"],
+Cell[37943, 945, 321, 6, 49, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[120316, 3389, 197, 3, 35, "Subsubsection"],
+Cell[38301, 956, 193, 3, 34, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[120538, 3396, 417, 10, 32, "Input"],
-Cell[120958, 3408, 30716, 912, 1683, "Output"]
+Cell[38519, 963, 562, 16, 30, "Input"],
+Cell[39084, 981, 212, 4, 43, "Output"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[151711, 4325, 196, 5, 32, "Input"],
-Cell[151910, 4332, 30649, 911, 1683, "Output"]
+Cell[39357, 992, 199, 8, 43, "Subsection"],
+Cell[CellGroupData[{
+Cell[39581, 1004, 125, 2, 34, "Subsubsection"],
+Cell[39709, 1008, 503, 9, 68, "Text"],
+Cell[40215, 1019, 320, 8, 24, "DisplayFormula"],
+Cell[40538, 1029, 134, 1, 30, "Text"],
+Cell[40675, 1032, 189, 4, 30, "Text"],
+Cell[40867, 1038, 249, 6, 24, "DisplayFormula"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41153, 1049, 197, 3, 34, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[41375, 1056, 422, 11, 30, "Input"],
+Cell[41800, 1069, 208, 3, 30, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42069, 1079, 211, 8, 43, "Subsection"],
+Cell[CellGroupData[{
+Cell[42305, 1091, 125, 2, 34, "Subsubsection"],
+Cell[42433, 1095, 673, 12, 87, "Text"],
+Cell[43109, 1109, 2157, 59, 42, "DisplayFormula"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45303, 1173, 150, 2, 34, "Subsubsection"],
+Cell[45456, 1177, 5448, 118, 305, "Text"],
+Cell[50907, 1297, 351, 6, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51295, 1308, 193, 3, 34, "Subsubsection"],
+Cell[51491, 1313, 407, 7, 30, "Input"],
+Cell[CellGroupData[{
+Cell[51923, 1324, 499, 13, 50, "Input"],
+Cell[52425, 1339, 183, 2, 30, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[182632, 5251, 148, 5, 65, "Section"],
+Cell[52681, 1349, 155, 5, 63, "Section"],
 Cell[CellGroupData[{
-Cell[182805, 5260, 365, 11, 71, "Subsection"],
+Cell[52861, 1358, 241, 9, 43, "Subsection"],
 Cell[CellGroupData[{
-Cell[183195, 5275, 125, 2, 35, "Subsubsection"],
-Cell[183323, 5279, 322, 6, 33, "Text"],
-Cell[183648, 5287, 460, 13, 47, "DisplayFormula"],
-Cell[184111, 5302, 361, 5, 33, "Text"],
-Cell[184475, 5309, 457, 14, 60, "DisplayFormula"],
-Cell[184935, 5325, 428, 5, 33, "Text"],
-Cell[185366, 5332, 329, 12, 39, "DisplayFormula"],
-Cell[185698, 5346, 379, 5, 33, "Text"]
+Cell[53127, 1371, 125, 2, 34, "Subsubsection"],
+Cell[53255, 1375, 351, 6, 49, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[186114, 5356, 171, 2, 35, "Subsubsection"],
-Cell[186288, 5360, 70, 1, 32, "Input"],
-Cell[186361, 5363, 1607, 44, 126, "Input"],
-Cell[187971, 5409, 1784, 47, 103, "Input"],
-Cell[189758, 5458, 2595, 74, 241, "Input"],
-Cell[192356, 5534, 186, 4, 32, "Input"],
+Cell[53643, 1386, 294, 4, 34, "Subsubsection"],
+Cell[53940, 1392, 70, 1, 30, "Input"],
+Cell[54013, 1395, 1603, 43, 107, "Input"],
+Cell[55619, 1440, 1784, 47, 88, "Input"],
+Cell[57406, 1489, 2593, 73, 202, "Input"],
 Cell[CellGroupData[{
-Cell[192567, 5542, 398, 10, 34, "Input"],
-Cell[192968, 5554, 138, 3, 49, "Output"]
+Cell[60024, 1566, 645, 19, 30, "Input"],
+Cell[60672, 1587, 248, 4, 43, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[193143, 5562, 476, 13, 34, "Input"],
-Cell[193622, 5577, 167, 3, 49, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[193826, 5585, 173, 3, 32, "Input"],
-Cell[194002, 5590, 173, 5, 78, "Output"]
-}, Open  ]],
-Cell[194190, 5598, 168, 3, 32, "Input"],
-Cell[CellGroupData[{
-Cell[194383, 5605, 359, 10, 34, "Input"],
-Cell[194745, 5617, 119, 2, 32, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[194901, 5624, 641, 16, 34, "Input"],
-Cell[195545, 5642, 165, 3, 49, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[195747, 5650, 231, 4, 32, "Input"],
-Cell[195981, 5656, 181, 5, 59, "Output"]
+Cell[60957, 1596, 120, 2, 30, "Input"],
+Cell[61080, 1600, 161, 2, 30, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[196223, 5668, 352, 11, 70, "Subsection"],
+Cell[61302, 1609, 245, 9, 43, "Subsection"],
 Cell[CellGroupData[{
-Cell[196600, 5683, 125, 2, 35, "Subsubsection"],
-Cell[196728, 5687, 136, 1, 33, "Text"],
-Cell[196867, 5690, 584, 18, 39, "DisplayFormula",
+Cell[61572, 1622, 125, 2, 34, "Subsubsection"],
+Cell[61700, 1626, 267, 5, 30, "Text"],
+Cell[61970, 1633, 368, 8, 24, "DisplayFormula"],
+Cell[62341, 1643, 285, 3, 30, "Text"],
+Cell[62629, 1648, 188, 4, 30, "Text"],
+Cell[62820, 1654, 388, 9, 24, "DisplayFormula"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[63245, 1668, 197, 3, 34, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[63467, 1675, 417, 10, 30, "Input"],
+Cell[63887, 1687, 348, 5, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64272, 1697, 196, 5, 30, "Input"],
+Cell[64471, 1704, 183, 2, 30, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64727, 1714, 148, 5, 63, "Section"],
+Cell[CellGroupData[{
+Cell[64900, 1723, 365, 11, 67, "Subsection"],
+Cell[CellGroupData[{
+Cell[65290, 1738, 125, 2, 34, "Subsubsection"],
+Cell[65418, 1742, 322, 6, 30, "Text"],
+Cell[65743, 1750, 460, 13, 45, "DisplayFormula"],
+Cell[66206, 1765, 361, 5, 30, "Text"],
+Cell[66570, 1772, 457, 14, 54, "DisplayFormula"],
+Cell[67030, 1788, 428, 5, 30, "Text"],
+Cell[67461, 1795, 329, 12, 36, "DisplayFormula"],
+Cell[67793, 1809, 379, 5, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68209, 1819, 171, 2, 34, "Subsubsection"],
+Cell[68383, 1823, 70, 1, 30, "Input"],
+Cell[68456, 1826, 1603, 43, 107, "Input"],
+Cell[70062, 1871, 1784, 47, 88, "Input"],
+Cell[71849, 1920, 2593, 73, 202, "Input"],
+Cell[74445, 1995, 186, 4, 30, "Input"],
+Cell[CellGroupData[{
+Cell[74656, 2003, 398, 10, 30, "Input"],
+Cell[75057, 2015, 160, 3, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75254, 2023, 472, 12, 30, "Input"],
+Cell[75729, 2037, 191, 3, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75957, 2045, 173, 3, 30, "Input"],
+Cell[76133, 2050, 195, 5, 70, "Output"]
+}, Open  ]],
+Cell[76343, 2058, 168, 3, 30, "Input"],
+Cell[CellGroupData[{
+Cell[76536, 2065, 359, 10, 30, "Input"],
+Cell[76898, 2077, 141, 2, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77076, 2084, 641, 16, 30, "Input"],
+Cell[77720, 2102, 189, 3, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77946, 2110, 231, 4, 30, "Input"],
+Cell[78180, 2116, 203, 5, 56, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[78444, 2128, 352, 11, 67, "Subsection"],
+Cell[CellGroupData[{
+Cell[78821, 2143, 125, 2, 34, "Subsubsection"],
+Cell[78949, 2147, 136, 1, 30, "Text"],
+Cell[79088, 2150, 584, 18, 37, "DisplayFormula",
  InitializationCell->True],
-Cell[197454, 5710, 658, 21, 26, "DisplayFormula"],
-Cell[198115, 5733, 123, 1, 33, "Text"]
+Cell[79675, 2170, 658, 21, 25, "DisplayFormula"],
+Cell[80336, 2193, 123, 1, 30, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[198275, 5739, 171, 2, 35, "Subsubsection"],
-Cell[198449, 5743, 171, 3, 32, "Input"],
-Cell[198623, 5748, 739, 12, 34, "Input"],
+Cell[80496, 2199, 171, 2, 34, "Subsubsection"],
+Cell[80670, 2203, 171, 3, 30, "Input"],
+Cell[80844, 2208, 739, 12, 30, "Input"],
 Cell[CellGroupData[{
-Cell[199387, 5764, 571, 14, 34, "Input"],
-Cell[199961, 5780, 165, 2, 32, "Output"]
+Cell[81608, 2224, 571, 14, 30, "Input"],
+Cell[82182, 2240, 187, 2, 30, "Output"]
 }, Open  ]],
-Cell[200141, 5785, 156, 3, 32, "Input"],
-Cell[200300, 5790, 280, 5, 34, "Input"],
+Cell[82384, 2245, 156, 3, 30, "Input"],
+Cell[82543, 2250, 280, 5, 30, "Input"],
 Cell[CellGroupData[{
-Cell[200605, 5799, 388, 9, 34, "Input"],
-Cell[200996, 5810, 142, 2, 32, "Output"]
+Cell[82848, 2259, 388, 9, 30, "Input"],
+Cell[83239, 2270, 166, 2, 30, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
