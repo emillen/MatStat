@@ -10,21 +10,21 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9047,        329]
-NotebookOptionsPosition[      7156,        263]
-NotebookOutlinePosition[      7496,        278]
-CellTagsIndexPosition[      7453,        275]
+NotebookDataLength[     13365,        461]
+NotebookOptionsPosition[     10791,        374]
+NotebookOutlinePosition[     11131,        389]
+CellTagsIndexPosition[     11088,        386]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[TextData[StyleBox["Project 1 - Convolution",
+Cell[TextData[StyleBox["Project 2 - Distributions",
  FontFamily->"Times New Roman"]], "Title",
  CellChangeTimes->{{3.6883365237665243`*^9, 3.6883365334510736`*^9}, {
   3.688336605068591*^9, 3.688336624396627*^9}, {3.688336877147334*^9, 
-  3.688336877211543*^9}}],
+  3.688336877211543*^9}, {3.689531919887904*^9, 3.689531926262679*^9}}],
 
 Cell["       Report", "Subtitle",
  CellChangeTimes->{{3.6883366477040377`*^9, 3.688336681980423*^9}}],
@@ -52,6 +52,17 @@ Cell[TextData[{
   3.688336774819894*^9, 3.688336777371758*^9}, {3.68834502411273*^9, 
   3.688345025232695*^9}, {3.6884668618208437`*^9, 3.6884668621312857`*^9}}],
 
+Cell[TextData[{
+ "For this project we were handed a module for randomizing numbers from six \
+different distributions (",
+ StyleBox["randomNumber", "Program"],
+ "). We are going to use it to test different distribution models, divided in \
+two sub-assignments. "
+}], "Text",
+ CellChangeTimes->{{3.689531891401449*^9, 3.6895319642555656`*^9}, {
+  3.689531998167654*^9, 3.6895320316633663`*^9}, {3.689532232870101*^9, 
+  3.689532250854061*^9}}],
+
 Cell[CellGroupData[{
 
 Cell[TextData[{
@@ -65,13 +76,68 @@ Cell[TextData[{
  CellChangeTimes->{{3.688336971634904*^9, 3.6883369780908213`*^9}, 
    3.688337034234638*^9}],
 
+Cell[CellGroupData[{
+
 Cell["Description", "Subsubsection",
  CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
    3.688339206676055*^9, {3.688343885127437*^9, 3.6883438872876377`*^9}}],
 
+Cell["\<\
+For this sub-assignment we are going to use the first (index zero in the \
+module) distribution to test three models, and see which one fits the random \
+data the best. The models are:\
+\>", "Text",
+ CellChangeTimes->{{3.689532045157538*^9, 3.689532096911127*^9}, {
+  3.6895323791892767`*^9, 3.689532391109068*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"pdf", "(", "x", ")"}], "\[Proportional]", 
+    SuperscriptBox["e", 
+     RowBox[{
+      RowBox[{"-", "a"}], " ", "x"}]]}], ",", 
+   RowBox[{"x", "\[GreaterEqual]", "0"}]}], TraditionalForm]], "ItemNumbered"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"pdf", "(", "x", ")"}], "\[Proportional]", 
+    RowBox[{"x", " ", 
+     SuperscriptBox["e", 
+      RowBox[{
+       RowBox[{"-", "a"}], " ", "x"}]]}]}], ",", 
+   RowBox[{"x", "\[GreaterEqual]", "0"}]}], TraditionalForm]], "ItemNumbered"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"pdf", "(", "x", ")"}], "\[Proportional]", 
+    RowBox[{"x", " ", 
+     RowBox[{"(", 
+      RowBox[{"x", "+", "b"}], ")"}], 
+     SuperscriptBox["e", 
+      RowBox[{
+       RowBox[{"-", "a"}], " ", "x"}]]}]}], ",", 
+   RowBox[{"x", "\[GreaterEqual]", "0"}]}], TraditionalForm]], "ItemNumbered"]
+}, Open  ]],
+
+Cell["\<\
+When we\[CloseCurlyQuote]ve found the most fitting model we are going to \
+compute the 95% confidence intervals for the constants in the chosen model. \
+\>", "Text",
+ CellChangeTimes->{{3.689532138582408*^9, 3.689532207966091*^9}}]
+}, Open  ]],
+
 Cell["Result", "Subsubsection",
  CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
-   3.688339206676055*^9, {3.688343891055583*^9, 3.688343891703444*^9}}]
+   3.688339206676055*^9, {3.688343891055583*^9, 3.688343891703444*^9}, {
+   3.689532397013096*^9, 3.689532407013072*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -86,15 +152,60 @@ Cell[TextData[{
 }], "Subsection",
  CellChangeTimes->{{3.688336983363152*^9, 3.688336984178742*^9}}],
 
+Cell[CellGroupData[{
+
 Cell["Description", "Subsubsection",
  CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
    3.688339206676055*^9, {3.688343885127437*^9, 3.6883438872876377`*^9}}],
+
+Cell["\<\
+For this sub-assignment we are going to generate data from all the different \
+distributions and determine which distribution model fits the data the best \
+for each data set (using the  straight line approach). Then we are going to \
+determine the point estimates of the parameters, and compute 95% confidence \
+intervals for those parameters.  \
+\>", "Text",
+ CellChangeTimes->{{3.6895322166794577`*^9, 3.6895323604933043`*^9}}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell["Result", "Subsubsection",
  CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
    3.688339206676055*^9, {3.688343891055583*^9, 3.688343891703444*^9}}],
+
+Cell["\<\
+These are the resulting distribution models for the data (by index in the \
+module):\
+\>", "Text",
+ CellChangeTimes->{{3.6895324097190104`*^9, 3.689532451885068*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Exponential distribution", "ItemNumbered",
+ CellChangeTimes->{{3.689532679630562*^9, 3.689532686651342*^9}},
+ FontSize->14],
+
+Cell["Geometric distribution", "ItemNumbered",
+ CellChangeTimes->{{3.689532499542975*^9, 3.689532550468093*^9}, {
+  3.689532584156396*^9, 3.689532591276959*^9}},
+ FontSize->14],
+
+Cell["Gamma distribution", "ItemNumbered",
+ CellChangeTimes->{{3.689532499542975*^9, 3.689532550468093*^9}, {
+  3.689532584156396*^9, 3.689532602709022*^9}},
+ FontSize->14],
+
+Cell["Normal distribution", "ItemNumbered",
+ CellChangeTimes->{{3.689532499542975*^9, 3.689532550468093*^9}, {
+  3.689532584156396*^9, 3.689532607652714*^9}},
+ FontSize->14],
+
+Cell["Binomial distribution", "ItemNumbered",
+ CellChangeTimes->{{3.689532499542975*^9, 3.689532550468093*^9}, {
+  3.689532584156396*^9, 3.6895326193637*^9}},
+ FontSize->14]
+}, Open  ]],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.689530670149267*^9, 3.689530673455567*^9}}]
@@ -278,56 +389,77 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 260, 4, 93, "Title"],
-Cell[843, 28, 101, 1, 51, "Subtitle"],
-Cell[947, 31, 361, 10, 30, "Text"],
+Cell[580, 22, 308, 4, 93, "Title"],
+Cell[891, 28, 101, 1, 51, "Subtitle"],
+Cell[995, 31, 361, 10, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1333, 45, 282, 7, 65, "Section"],
+Cell[1381, 45, 282, 7, 65, "Section"],
+Cell[1666, 54, 442, 9, 77, "Text"],
 Cell[CellGroupData[{
-Cell[1640, 56, 218, 9, 45, "Subsection"],
-Cell[1861, 67, 176, 2, 35, "Subsubsection"],
-Cell[2040, 71, 169, 2, 29, "Subsubsection"]
+Cell[2133, 67, 218, 9, 45, "Subsection"],
+Cell[CellGroupData[{
+Cell[2376, 80, 176, 2, 35, "Subsubsection"],
+Cell[2555, 84, 325, 6, 55, "Text"],
+Cell[CellGroupData[{
+Cell[2905, 94, 267, 8, 34, "ItemNumbered"],
+Cell[3175, 104, 295, 9, 34, "ItemNumbered"],
+Cell[3473, 115, 353, 11, 34, "ItemNumbered"]
+}, Open  ]],
+Cell[3841, 129, 241, 4, 55, "Text"]
+}, Open  ]],
+Cell[4097, 136, 219, 3, 35, "Subsubsection"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2246, 78, 190, 8, 45, "Subsection"],
-Cell[2439, 88, 176, 2, 35, "Subsubsection"],
+Cell[4353, 144, 190, 8, 45, "Subsection"],
 Cell[CellGroupData[{
-Cell[2640, 94, 169, 2, 29, "Subsubsection"],
-Cell[2812, 98, 92, 1, 32, "Input"]
+Cell[4568, 156, 176, 2, 35, "Subsubsection"],
+Cell[4747, 160, 440, 7, 99, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5224, 172, 169, 2, 35, "Subsubsection"],
+Cell[5396, 176, 176, 4, 33, "Text"],
+Cell[CellGroupData[{
+Cell[5597, 184, 129, 2, 31, "ItemNumbered"],
+Cell[5729, 188, 176, 3, 31, "ItemNumbered"],
+Cell[5908, 193, 172, 3, 31, "ItemNumbered"],
+Cell[6083, 198, 173, 3, 31, "ItemNumbered"],
+Cell[6259, 203, 173, 3, 31, "ItemNumbered"]
+}, Open  ]],
+Cell[6447, 209, 92, 1, 32, "Input"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2965, 106, 276, 8, 65, "Section"],
+Cell[6600, 217, 276, 8, 65, "Section"],
 Cell[CellGroupData[{
-Cell[3266, 118, 227, 9, 44, "Subsection"],
-Cell[3496, 129, 125, 2, 35, "Subsubsection"],
-Cell[3624, 133, 150, 2, 29, "Subsubsection"],
-Cell[3777, 137, 195, 3, 29, "Subsubsection"]
+Cell[6901, 229, 227, 9, 44, "Subsection"],
+Cell[7131, 240, 125, 2, 35, "Subsubsection"],
+Cell[7259, 244, 150, 2, 29, "Subsubsection"],
+Cell[7412, 248, 195, 3, 29, "Subsubsection"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4009, 145, 227, 9, 44, "Subsection"],
-Cell[4239, 156, 125, 2, 35, "Subsubsection"],
-Cell[4367, 160, 193, 3, 29, "Subsubsection"]
+Cell[7644, 256, 227, 9, 44, "Subsection"],
+Cell[7874, 267, 125, 2, 35, "Subsubsection"],
+Cell[8002, 271, 193, 3, 29, "Subsubsection"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4597, 168, 231, 9, 44, "Subsection"],
-Cell[4831, 179, 125, 2, 35, "Subsubsection"],
-Cell[4959, 183, 197, 3, 29, "Subsubsection"]
+Cell[8232, 279, 231, 9, 44, "Subsection"],
+Cell[8466, 290, 125, 2, 35, "Subsubsection"],
+Cell[8594, 294, 197, 3, 29, "Subsubsection"]
 }, Open  ]],
-Cell[5171, 189, 226, 9, 44, "Subsection"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[5434, 203, 253, 7, 65, "Section"],
-Cell[CellGroupData[{
-Cell[5712, 214, 293, 10, 44, "Subsection"],
-Cell[6008, 226, 125, 2, 35, "Subsubsection"],
-Cell[6136, 230, 294, 4, 29, "Subsubsection"]
+Cell[8806, 300, 226, 9, 44, "Subsection"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6467, 239, 321, 10, 45, "Subsection"],
-Cell[6791, 251, 125, 2, 35, "Subsubsection"],
-Cell[6919, 255, 197, 3, 29, "Subsubsection"]
+Cell[9069, 314, 253, 7, 65, "Section"],
+Cell[CellGroupData[{
+Cell[9347, 325, 293, 10, 44, "Subsection"],
+Cell[9643, 337, 125, 2, 35, "Subsubsection"],
+Cell[9771, 341, 294, 4, 29, "Subsubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10102, 350, 321, 10, 45, "Subsection"],
+Cell[10426, 362, 125, 2, 35, "Subsubsection"],
+Cell[10554, 366, 197, 3, 29, "Subsubsection"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
