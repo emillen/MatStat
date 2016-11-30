@@ -1,0 +1,337 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9047,        329]
+NotebookOptionsPosition[      7156,        263]
+NotebookOutlinePosition[      7496,        278]
+CellTagsIndexPosition[      7453,        275]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Project 1 - Convolution",
+ FontFamily->"Times New Roman"]], "Title",
+ CellChangeTimes->{{3.6883365237665243`*^9, 3.6883365334510736`*^9}, {
+  3.688336605068591*^9, 3.688336624396627*^9}, {3.688336877147334*^9, 
+  3.688336877211543*^9}}],
+
+Cell["       Report", "Subtitle",
+ CellChangeTimes->{{3.6883366477040377`*^9, 3.688336681980423*^9}}],
+
+Cell[TextData[{
+ StyleBox["Emil",
+  IgnoreSpellCheck->True],
+ " Lengman, emillen@kth.se\nSimon Enerstrand, simonene@kth.se"
+}], "Text",
+ CellMargins->{{27, 10}, {0, 0}},
+ CellChangeTimes->{
+  3.688336421059956*^9, {3.688336691860662*^9, 3.6883367156480083`*^9}, {
+   3.6883420597172327`*^9, 3.688342061500751*^9}},
+ FontFamily->"Times New Roman",
+ FontSize->10],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ". Summary"
+}], "Section",
+ CellChangeTimes->{{3.688336718948107*^9, 3.688336720452073*^9}, {
+  3.688336774819894*^9, 3.688336777371758*^9}, {3.68834502411273*^9, 
+  3.688345025232695*^9}, {3.6884668618208437`*^9, 3.6884668621312857`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ "  Summary sub-assignment 1"
+}], "Subsection",
+ CellChangeTimes->{{3.688336971634904*^9, 3.6883369780908213`*^9}, 
+   3.688337034234638*^9}],
+
+Cell["Description", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9, {3.688343885127437*^9, 3.6883438872876377`*^9}}],
+
+Cell["Result", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9, {3.688343891055583*^9, 3.688343891703444*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ "  Summary sub-assignment 2"
+}], "Subsection",
+ CellChangeTimes->{{3.688336983363152*^9, 3.688336984178742*^9}}],
+
+Cell["Description", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9, {3.688343885127437*^9, 3.6883438872876377`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Result", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9, {3.688343891055583*^9, 3.688343891703444*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.689530670149267*^9, 3.689530673455567*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ". Distribution parameters"
+}], "Section",
+ CellChangeTimes->{
+  3.688336997194717*^9, {3.68833706627428*^9, 3.6883370739781713`*^9}, {
+   3.689530611978314*^9, 3.68953062821533*^9}, {3.689530669046975*^9, 
+   3.689530682839226*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " First model"
+}], "Subsection",
+ CellChangeTimes->{{3.688337833284293*^9, 3.6883378387402563`*^9}, {
+  3.689530732142811*^9, 3.689530736910651*^9}}],
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9}],
+
+Cell["Discussion", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, {
+  3.688339162508295*^9, 3.688339166187951*^9}}],
+
+Cell["Code", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, {
+  3.688339162508295*^9, 3.688339166187951*^9}, {3.688342470353647*^9, 
+  3.6883424708497562`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Second model"
+}], "Subsection",
+ CellChangeTimes->{{3.68833807029881*^9, 3.688338079218799*^9}, {
+  3.6895307402388678`*^9, 3.689530742726688*^9}}],
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9}],
+
+Cell["Code", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, {
+  3.688339162508295*^9, 3.688339166187951*^9}, {3.688342467689698*^9, 
+  3.688342468121648*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Third model"
+}], "Subsection",
+ CellChangeTimes->{{3.6883380857471867`*^9, 3.688338093298911*^9}, {
+  3.6895307460631933`*^9, 3.6895307489345703`*^9}}],
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9}],
+
+Cell["Code", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, {
+  3.688339162508295*^9, 3.688339166187951*^9}, {3.6883424648359222`*^9, 
+  3.6883424653138523`*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Discussion"
+}], "Subsection",
+ CellChangeTimes->{{3.6883380857471867`*^9, 3.688338121770508*^9}, {
+  3.689530755142778*^9, 3.689530756862509*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ". Which distribution?"
+}], "Section",
+ CellChangeTimes->{{3.6883370780341473`*^9, 3.6883370831860743`*^9}, {
+  3.689530696414987*^9, 3.6895306977155533`*^9}, {3.689530815894239*^9, 
+  3.6895308198461847`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Determine a distribution model "
+}], "Subsection",
+ CellChangeTimes->{{3.68833807029881*^9, 3.688338079218799*^9}, {
+  3.688344869609865*^9, 3.688344869825639*^9}, {3.689530801942465*^9, 
+  3.689530810446213*^9}}],
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9}],
+
+Cell["Code", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, {
+  3.688339162508295*^9, 3.688339166187951*^9}, {3.6883424648359222`*^9, 
+  3.6883424653138523`*^9}, {3.688345011432764*^9, 3.6883450125764303`*^9}, {
+  3.688347507361436*^9, 3.688347507537098*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Point estimates, and confidence intervals, for parameters"
+}], "Subsection",
+ CellChangeTimes->{{3.68833807029881*^9, 3.688338079218799*^9}, {
+  3.6883445611314297`*^9, 3.688344568635379*^9}, {3.689530863222073*^9, 
+  3.689530887894001*^9}}],
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, 
+   3.688339206676055*^9}],
+
+Cell["Code", "Subsubsection",
+ CellChangeTimes->{{3.688339085739612*^9, 3.688339097410466*^9}, {
+  3.688339162508295*^9, 3.688339166187951*^9}, {3.6883424648359222`*^9, 
+  3.6883424653138523`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{839, 995},
+WindowMargins->{{317, Automatic}, {Automatic, 28}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 260, 4, 93, "Title"],
+Cell[843, 28, 101, 1, 51, "Subtitle"],
+Cell[947, 31, 361, 10, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1333, 45, 282, 7, 65, "Section"],
+Cell[CellGroupData[{
+Cell[1640, 56, 218, 9, 45, "Subsection"],
+Cell[1861, 67, 176, 2, 35, "Subsubsection"],
+Cell[2040, 71, 169, 2, 29, "Subsubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2246, 78, 190, 8, 45, "Subsection"],
+Cell[2439, 88, 176, 2, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[2640, 94, 169, 2, 29, "Subsubsection"],
+Cell[2812, 98, 92, 1, 32, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2965, 106, 276, 8, 65, "Section"],
+Cell[CellGroupData[{
+Cell[3266, 118, 227, 9, 44, "Subsection"],
+Cell[3496, 129, 125, 2, 35, "Subsubsection"],
+Cell[3624, 133, 150, 2, 29, "Subsubsection"],
+Cell[3777, 137, 195, 3, 29, "Subsubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4009, 145, 227, 9, 44, "Subsection"],
+Cell[4239, 156, 125, 2, 35, "Subsubsection"],
+Cell[4367, 160, 193, 3, 29, "Subsubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4597, 168, 231, 9, 44, "Subsection"],
+Cell[4831, 179, 125, 2, 35, "Subsubsection"],
+Cell[4959, 183, 197, 3, 29, "Subsubsection"]
+}, Open  ]],
+Cell[5171, 189, 226, 9, 44, "Subsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5434, 203, 253, 7, 65, "Section"],
+Cell[CellGroupData[{
+Cell[5712, 214, 293, 10, 44, "Subsection"],
+Cell[6008, 226, 125, 2, 35, "Subsubsection"],
+Cell[6136, 230, 294, 4, 29, "Subsubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6467, 239, 321, 10, 45, "Subsection"],
+Cell[6791, 251, 125, 2, 35, "Subsubsection"],
+Cell[6919, 255, 197, 3, 29, "Subsubsection"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
